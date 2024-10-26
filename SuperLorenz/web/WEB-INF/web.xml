@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>ControllerAdmin</servlet-name>
+        <servlet-class>controller.ControllerAdmin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerEmpleado</servlet-name>
+        <servlet-class>co.edu.konradlorenz.controller.ControllerEmpleado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerCliente</servlet-name>
+        <servlet-class>co.edu.konradlorenz.controller.ControllerCliente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerProveedor</servlet-name>
+        <servlet-class>co.edu.konradlorenz.controller.ControllerProveedor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerPersona</servlet-name>
+        <servlet-class>co.edu.konradlorenz.controller.ControllerPersona</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerAdmin</servlet-name>
+        <url-pattern>/ControllerAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerEmpleado</servlet-name>
+        <url-pattern>/ControllerEmpleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerCliente</servlet-name>
+        <url-pattern>/ControllerCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerProveedor</servlet-name>
+        <url-pattern>/ControllerProveedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerPersona</servlet-name>
+        <url-pattern>/ControllerPersona</url-pattern>
+    </servlet-mapping>
+</web-app>
