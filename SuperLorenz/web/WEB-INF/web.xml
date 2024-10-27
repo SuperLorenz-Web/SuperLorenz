@@ -6,19 +6,19 @@
     </servlet>
     <servlet>
         <servlet-name>ControllerEmpleado</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ControllerEmpleado</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.ServletEmpleado</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ControllerCliente</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ControllerCliente</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.ServletCliente</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ControllerProveedor</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ControllerProveedor</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.ServletProveedor</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ControllerPersona</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ControllerPersona</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.ServletPersona</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ControllerAdmin</servlet-name>
