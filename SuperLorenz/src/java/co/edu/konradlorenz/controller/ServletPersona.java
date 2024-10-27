@@ -12,29 +12,17 @@ public class ServletPersona extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-        int personaID;
-        String personaIDString;
         String documentoID;
         String tipoDocumento;
         String nombre;
         String celular;
     
-        personaIDString = new String(request.getParameter("personaID").getBytes("ISO-8859-1"),"UTF-8");
         documentoID = new String(request.getParameter("documentoID").getBytes("ISO-8859-1"),"UTF-8");
         tipoDocumento = new String(request.getParameter("tipoDocumento").getBytes("ISO-8859-1"),"UTF-8");
         nombre = new String(request.getParameter("nombre").getBytes("ISO-8859-1"),"UTF-8");
         celular = new String(request.getParameter("celular").getBytes("ISO-8859-1"),"UTF-8");
-    
-        try {
-            personaID = Integer.parseInt(personaIDString);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            personaID = 0; // O un valor por defecto si la conversión falla
-        }
-        //try-catch
         
         Persona persona = new Persona();
-        persona.setPersonaID(personaID);
         persona.setDocumentoID(documentoID);
         persona.setTipoDocumento(tipoDocumento);
         persona.setNombre(nombre);
