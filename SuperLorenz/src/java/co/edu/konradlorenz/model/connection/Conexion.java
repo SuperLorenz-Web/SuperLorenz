@@ -1,4 +1,4 @@
-package co.edu.konradlorenz.model.conexion;
+package co.edu.konradlorenz.model.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,9 +8,9 @@ import java.sql.Statement;
 public class Conexion {
     
     public static String user = "root";
-    public static String password = "root";
+    public static String password = "G01fukl*";
     public static String server = "localhost:3306";
-    public static String BD = "tienda";
+    public static String BD = "SuperLorenz";
     
     public Connection crearConexion() {
         
