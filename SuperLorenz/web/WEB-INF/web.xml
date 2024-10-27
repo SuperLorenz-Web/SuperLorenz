@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
-        <servlet-name>ControllerAdmin</servlet-name>
-        <servlet-class>controller.ControllerAdmin</servlet-class>
+        <servlet-name>ServletAdmin</servlet-name>
+        <servlet-class>controller.ServletAdmin</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControllerEmpleado</servlet-name>
+        <servlet-name>ServletEmpleado</servlet-name>
         <servlet-class>co.edu.konradlorenz.controller.ServletEmpleado</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControllerCliente</servlet-name>
+        <servlet-name>ServletCliente</servlet-name>
         <servlet-class>co.edu.konradlorenz.controller.ServletCliente</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControllerProveedor</servlet-name>
+        <servlet-name>ServletProveedor</servlet-name>
         <servlet-class>co.edu.konradlorenz.controller.ServletProveedor</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControllerPersona</servlet-name>
+        <servlet-name>ServletPersona</servlet-name>
         <servlet-class>co.edu.konradlorenz.controller.ServletPersona</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ControllerAdmin</servlet-name>
-        <url-pattern>/ControllerAdmin</url-pattern>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControllerEmpleado</servlet-name>
-        <url-pattern>/ControllerEmpleado</url-pattern>
+        <servlet-name>ServletEmpleado</servlet-name>
+        <url-pattern>/ServletEmpleado</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControllerCliente</servlet-name>
-        <url-pattern>/ControllerCliente</url-pattern>
+        <servlet-name>ServletCliente</servlet-name>
+        <url-pattern>/ServletCliente</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControllerProveedor</servlet-name>
-        <url-pattern>/ControllerProveedor</url-pattern>
+        <servlet-name>ServletProveedor</servlet-name>
+        <url-pattern>/ServletProveedor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControllerPersona</servlet-name>
-        <url-pattern>/ControllerPersona</url-pattern>
+        <servlet-name>ServletPersona</servlet-name>
+        <url-pattern>/ServletPersona</url-pattern>
     </servlet-mapping>
 </web-app>
