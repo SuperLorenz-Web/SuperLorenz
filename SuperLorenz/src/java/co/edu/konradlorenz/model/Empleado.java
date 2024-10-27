@@ -15,7 +15,7 @@ public class Empleado extends Persona{
     }
 
     public Empleado(int empleadoID, String cargo, String dependencia, String tipoContrato, String eps, String arl, String nombreEmergencia, String celularEmergencia, int personaID, String documentoID, String tipoDocumento, String nombre, String celular) {
-        super(personaID, documentoID, tipoDocumento, nombre, celular);
+        //super(personaID, documentoID, tipoDocumento, nombre, celular); // FIX ME: personaID
         this.empleadoID = empleadoID;
         this.cargo = cargo;
         this.dependencia = dependencia;

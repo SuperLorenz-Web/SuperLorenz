@@ -11,19 +11,10 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int personaID, String documentoID, String tipoDocumento, String nombre, String celular) {
-        this.personaID = personaID;
+    public Persona(String documentoID, String tipoDocumento, String nombre, String celular) {
         this.documentoID = documentoID;
         this.tipoDocumento = tipoDocumento;
         this.nombre = nombre;
-        this.celular = celular;
-    }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
         this.celular = celular;
     }
 
@@ -57,6 +48,14 @@ public class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
 }
