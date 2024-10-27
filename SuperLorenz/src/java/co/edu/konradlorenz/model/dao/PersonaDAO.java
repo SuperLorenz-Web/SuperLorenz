@@ -1,11 +1,12 @@
 package co.edu.konradlorenz.model.dao;
 
-import co.edu.konradlorenz.model.conexion.Conexion;
+import co.edu.konradlorenz.model.connection.Conexion;
 import co.edu.konradlorenz.model.Persona;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 public class PersonaDAO {
 
     public static int agregarPersona(Persona persona){

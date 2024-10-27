@@ -1,6 +1,6 @@
 package co.edu.konradlorenz.model.dao;
 
-import co.edu.konradlorenz.model.conexion.Conexion;
+import co.edu.konradlorenz.model.connection.Conexion;
 import co.edu.konradlorenz.model.Empleado;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
