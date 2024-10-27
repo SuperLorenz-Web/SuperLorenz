@@ -2,23 +2,23 @@
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
         <servlet-name>ServletAdmin</servlet-name>
-        <servlet-class>controller.ServletAdmin</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.servlet.ServletAdmin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletEmpleado</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ServletEmpleado</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.servlet.ServletEmpleado</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletCliente</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ServletCliente</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.servlet.ServletCliente</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletProveedor</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ServletProveedor</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.servlet.ServletProveedor</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletPersona</servlet-name>
-        <servlet-class>co.edu.konradlorenz.controller.ServletPersona</servlet-class>
+        <servlet-class>co.edu.konradlorenz.controller.servlet.ServletPersona</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletAdmin</servlet-name>

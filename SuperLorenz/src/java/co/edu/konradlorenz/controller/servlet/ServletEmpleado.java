@@ -1,4 +1,4 @@
-package co.edu.konradlorenz.controller;
+package co.edu.konradlorenz.controller.servlet;
 
 import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.dao.*;
@@ -8,10 +8,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ServletProveedor extends HttpServlet {
+public class ServletEmpleado extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        
         
         
     }
