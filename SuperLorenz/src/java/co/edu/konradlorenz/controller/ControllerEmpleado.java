@@ -1,12 +1,14 @@
 package co.edu.konradlorenz.controller;
 
+import co.edu.konradlorenz.model.*;
+import co.edu.konradlorenz.model.dao.*;
+import co.edu.konradlorenz.model.conexion.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-import co.edu.konradlorenz.model.*;
+import java.util.*;
 
 public class ControllerEmpleado extends HttpServlet {
 
