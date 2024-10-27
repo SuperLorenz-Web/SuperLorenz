@@ -1,4 +1,4 @@
-package co.edu.konradlorenz.controller;
+package co.edu.konradlorenz.controller.servlet;
 
 import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.dao.*;
