@@ -10,13 +10,11 @@ import java.io.IOException;
 
 public class ServletCliente extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  protected void processRequest(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
         
-        
-        
+        request.getRequestDispatcher("/cliente.jsp").forward(request, response);
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -32,7 +30,6 @@ public class ServletCliente extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+        return "Servlet para la gestión de la vista de empleado";
+    }
 }
