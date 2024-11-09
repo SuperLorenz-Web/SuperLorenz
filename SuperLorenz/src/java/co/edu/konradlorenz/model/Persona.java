@@ -1,37 +1,35 @@
 package co.edu.konradlorenz.model;
 
-public class Persona {
+public abstract class Persona {
     
     protected int personaID;
-    protected String documentoID;
+    protected String numeroDocumento;
     protected String tipoDocumento;
-    protected String nombre;
+    protected String nombres;
+    protected String apellidos;
     protected String celular;
+    protected String correo;
+    protected String password;
 
     public Persona() {
     }
 
-    public Persona(String documentoID, String tipoDocumento, String nombre, String celular) {
-        this.documentoID = documentoID;
+    public Persona(String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
+        this.numeroDocumento = numeroDocumento;
         this.tipoDocumento = tipoDocumento;
-        this.nombre = nombre;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
         this.celular = celular;
+        this.correo = correo;
+        this.password = password;
     }
 
-    public int getPersonaID() {
-        return personaID;
+    public String getNumeroDocumento() {
+        return numeroDocumento;
     }
 
-    public void setPersonaID(int personaID) {
-        this.personaID = personaID;
-    }
-
-    public String getDocumentoID() {
-        return documentoID;
-    }
-
-    public void setDocumentoID(String documentoID) {
-        this.documentoID = documentoID;
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 
     public String getTipoDocumento() {
@@ -42,12 +40,20 @@ public class Persona {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public String getCelular() {
@@ -58,5 +64,27 @@ public class Persona {
         this.celular = celular;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public void setPassword(String correo){
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "personaID=" + personaID + ", numeroDocumento=" + numeroDocumento + ", tipoDocumento=" + tipoDocumento + ", nombres=" + nombres + ", apellidos=" + apellidos + ", celular=" + celular + ", correo=" + correo + ", password=" + password + '}';
+    }
+
 }
-//class
+
+    
+
+   
