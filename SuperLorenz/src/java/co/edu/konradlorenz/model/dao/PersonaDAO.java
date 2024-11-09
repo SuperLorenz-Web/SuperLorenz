@@ -21,16 +21,15 @@ public class PersonaDAO {
         try {
             connection = conexion.crearConexion();
             
-            String q = "INSERT INTO Persona (personaID, documentoID, tipoDocumento, nombre, celular)"
-            + "VALUES (?,?,?,?,?)";
+            String q = "INSERT INTO Persona (documentoID, tipoDocumento, nombre, celular)"
+            + "VALUES (?,?,?,?)";
             
             preparedStatement = connection.prepareStatement(q);
             
-            preparedStatement.setInt(1, persona.getPersonaID());
-            preparedStatement.setString(2, persona.getDocumentoID());
-            preparedStatement.setString(3, persona.getTipoDocumento());
-            preparedStatement.setString(4, persona.getNombre());
-            preparedStatement.setString(5, persona.getCelular());
+            preparedStatement.setString(1, persona.getDocumentoID());
+            preparedStatement.setString(2, persona.getTipoDocumento());
+            preparedStatement.setString(3, persona.getNombre());
+            preparedStatement.setString(4, persona.getCelular());
             
             status = preparedStatement.executeUpdate();
             connection.close();
