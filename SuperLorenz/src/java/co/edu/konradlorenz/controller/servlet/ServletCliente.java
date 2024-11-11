@@ -2,7 +2,7 @@ package co.edu.konradlorenz.controller.servlet;
 
 import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.dao.*;
-import co.edu.konradlorenz.model.enum.*;
+import co.edu.konradlorenz.model.enums.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
