@@ -32,7 +32,7 @@ public class ClienteDAO {
             personaStmt = connection.prepareStatement(personaQuery, PreparedStatement.RETURN_GENERATED_KEYS);
             
             personaStmt.setString(1, cliente.getNumeroDocumento());
-            personaStmt.setString(2, cliente.getTipoDocumento());
+            personaStmt.setString(2, cliente.getTipoDocumento().name());//.name() convierte enum a String
             personaStmt.setString(3, cliente.getNombres());
             personaStmt.setString(4, cliente.getApellidos());
             personaStmt.setString(5, cliente.getCelular());
@@ -55,10 +55,10 @@ public class ClienteDAO {
             clienteStmt = connection.prepareStatement(clienteQuery);
             
             clienteStmt.setInt(1, personaID);//personaID antes obtenido.
-            clienteStmt.setString(2, cliente.getTipoCliente());
+            clienteStmt.setString(2, cliente.getTipoCliente().name());//.name() convierte enum a String
             clienteStmt.setString(3, cliente.getDireccion());
             clienteStmt.setDate(4, (Date) cliente.getFechaNacimiento());//Cast de util.Date a sql.Date
-            clienteStmt.setString(5, cliente.getEstadoCivil());
+            clienteStmt.setString(5, cliente.getEstadoCivil().name());//.name() convierte enum a String
             clienteStmt.setBoolean(6, cliente.isAutorizacionDeDatos());
             
             status = clienteStmt.executeUpdate();
