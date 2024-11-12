@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.text.*;
 import java.util.*;
 
-@WebServlet("/ServletCliente")
 public class ServletCliente extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
