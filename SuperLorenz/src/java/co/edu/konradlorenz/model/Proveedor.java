@@ -1,5 +1,7 @@
 package co.edu.konradlorenz.model;
 
+import co.edu.konradlorenz.model.enums.*;
+
 public class Proveedor extends Persona {
     private int proveedorID;
     private int personaID; 
@@ -8,23 +10,6 @@ public class Proveedor extends Persona {
     private String numeroContacto;
     
     public Proveedor(){
-    }
-
-    public Proveedor(int proveedorID, int personaID, String tipoProveedor, String nombreContacto, String numeroContacto) {
-        this.proveedorID = proveedorID;
-        this.personaID = personaID;
-        this.tipoProveedor = tipoProveedor;
-        this.nombreContacto = nombreContacto;
-        this.numeroContacto = numeroContacto;
-    }
-
-    public Proveedor(int proveedorID, int personaID, String tipoProveedor, String nombreContacto, String numeroContacto, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
-        super(numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo);
-        this.proveedorID = proveedorID;
-        this.personaID = personaID;
-        this.tipoProveedor = tipoProveedor;
-        this.nombreContacto = nombreContacto;
-        this.numeroContacto = numeroContacto;
     }
 
     public int getProveedorID() {
@@ -75,11 +60,11 @@ public class Proveedor extends Persona {
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 

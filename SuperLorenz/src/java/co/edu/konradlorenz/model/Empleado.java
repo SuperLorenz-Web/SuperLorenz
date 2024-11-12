@@ -1,7 +1,8 @@
 package co.edu.konradlorenz.model;
 
+import co.edu.konradlorenz.model.enums.*;
+
 public class Empleado extends Persona{
-    
     
     private int empleadoID;
     private int personaID;
@@ -14,31 +15,6 @@ public class Empleado extends Persona{
     private String celularEmergencia;
 
     public Empleado() {
-    }
-
-    public Empleado(int empleadoID, int personaID, String cargo, String dependencia, String tipoContrato, String eps, String arl, String nombreEmergencia, String celularEmergencia) {
-        this.empleadoID = empleadoID;
-        this.personaID = personaID;
-        this.cargo = cargo;
-        this.dependencia = dependencia;
-        this.tipoContrato = tipoContrato;
-        this.eps = eps;
-        this.arl = arl;
-        this.nombreEmergencia = nombreEmergencia;
-        this.celularEmergencia = celularEmergencia;
-    }
-
-    public Empleado(int empleadoID, int personaID, String cargo, String dependencia, String tipoContrato, String eps, String arl, String nombreEmergencia, String celularEmergencia, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
-        super(numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo);
-        this.empleadoID = empleadoID;
-        this.personaID = personaID;
-        this.cargo = cargo;
-        this.dependencia = dependencia;
-        this.tipoContrato = tipoContrato;
-        this.eps = eps;
-        this.arl = arl;
-        this.nombreEmergencia = nombreEmergencia;
-        this.celularEmergencia = celularEmergencia;
     }
 
     public int getEmpleadoID() {
@@ -120,11 +96,11 @@ public class Empleado extends Persona{
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
