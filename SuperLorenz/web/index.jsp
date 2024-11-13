@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -142,7 +143,7 @@
                 <span>Imagen de Producto</span>
             </div>
             <strong>Nombre Producto</strong><br>
-            Descripci髇 de producto.<br>
+            Descripci贸n de producto.<br>
             Precio producto.
         </div>
         <div class="carousel-item">
@@ -150,7 +151,7 @@
                 <span>Imagen de Producto</span>
             </div>
             <strong>Nombre Producto</strong><br>
-            Descripci髇 de producto.<br>
+            Descripci贸n de producto.<br>
             Precio producto.
         </div>
         <span class="carousel-buttons">&gt;</span>
@@ -164,7 +165,7 @@
             </div>
             <div class="product-info">
                 <strong>Nombre Producto</strong><br>
-                Descripci髇 de producto.<br>
+                Descripci贸n de producto.<br>
                 Precio producto.
             </div>
             <button class="plus-btn">+</button>
@@ -176,7 +177,7 @@
             </div>
             <div class="product-info">
                 <strong>Nombre Producto</strong><br>
-                Descripci髇 de producto.<br>
+                Descripci贸n de producto.<br>
                 Precio producto.
             </div>
             <button class="plus-btn">+</button>
@@ -188,7 +189,7 @@
             </div>
             <div class="product-info">
                 <strong>Nombre Producto</strong><br>
-                Descripci髇 de producto.<br>
+                Descripci贸n de producto.<br>
                 Precio producto.
             </div>
             <button class="plus-btn">+</button>
@@ -200,7 +201,7 @@
             </div>
             <div class="product-info">
                 <strong>Nombre Producto</strong><br>
-                Descripci髇 de producto.<br>
+                Descripci贸n de producto.<br>
                 Precio producto.
             </div>
             <button class="plus-btn">+</button>
