@@ -29,8 +29,8 @@ public class EmpleadoDAO {
             preparedStatement.setInt(1, empleado.getPersonaID());
             preparedStatement.setInt(2, empleado.getEmpleadoID());
             preparedStatement.setString(3, empleado.getCargo());
-            preparedStatement.setString(4, empleado.getDependencia());
-            preparedStatement.setString(5, empleado.getTipoContrato());
+            preparedStatement.setString(4, empleado.getDependencia().name());//.name() convierte enum a String
+            preparedStatement.setString(5, empleado.getTipoContrato().name());//.name() convierte enum a String
             preparedStatement.setString(6, empleado.getEps());
             preparedStatement.setString(7, empleado.getArl());
             preparedStatement.setString(8, empleado.getNombreEmergencia());

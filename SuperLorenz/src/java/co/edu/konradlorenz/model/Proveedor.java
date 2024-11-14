@@ -1,15 +1,32 @@
 package co.edu.konradlorenz.model;
 
-import co.edu.konradlorenz.model.enums.*;
+import co.edu.konradlorenz.model.enums.TipoDocumento;
+import co.edu.konradlorenz.model.enums.TipoProveedor;
 
 public class Proveedor extends Persona {
     private int proveedorID;
     private int personaID; 
-    private String tipoProveedor;
+    private TipoProveedor tipoProveedor;
     private String nombreContacto;
     private String numeroContacto;
     
     public Proveedor(){
+    }
+
+    public Proveedor(int proveedorID, int personaID, TipoProveedor tipoProveedor, String nombreContacto, String numeroContacto) {
+        this.proveedorID = proveedorID;
+        this.personaID = personaID;
+        this.tipoProveedor = tipoProveedor;
+        this.nombreContacto = nombreContacto;
+        this.numeroContacto = numeroContacto;
+    }
+
+    public Proveedor(int proveedorID, int personaID, TipoProveedor tipoProveedor, String nombreContacto, String numeroContacto, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
+        this.proveedorID = proveedorID;
+        this.personaID = personaID;
+        this.tipoProveedor = tipoProveedor;
+        this.nombreContacto = nombreContacto;
+        this.numeroContacto = numeroContacto;
     }
 
     public int getProveedorID() {
@@ -28,11 +45,11 @@ public class Proveedor extends Persona {
         this.personaID = personaID;
     }
 
-    public String getTipoProveedor() {
+    public TipoProveedor getTipoProveedor() {
         return tipoProveedor;
     }
 
-    public void setTipoProveedor(String tipoProveedor) {
+    public void setTipoProveedor(TipoProveedor tipoProveedor) {
         this.tipoProveedor = tipoProveedor;
     }
 
@@ -109,6 +126,3 @@ public class Proveedor extends Persona {
     }
     
     }
-    
-
-
