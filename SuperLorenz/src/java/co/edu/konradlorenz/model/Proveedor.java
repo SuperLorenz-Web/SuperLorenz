@@ -1,16 +1,19 @@
 package co.edu.konradlorenz.model;
 
+import co.edu.konradlorenz.model.enums.TipoDocumento;
+import co.edu.konradlorenz.model.enums.TipoProveedor;
+
 public class Proveedor extends Persona {
     private int proveedorID;
     private int personaID; 
-    private String tipoProveedor;
+    private TipoProveedor tipoProveedor;
     private String nombreContacto;
     private String numeroContacto;
     
     public Proveedor(){
     }
 
-    public Proveedor(int proveedorID, int personaID, String tipoProveedor, String nombreContacto, String numeroContacto) {
+    public Proveedor(int proveedorID, int personaID, TipoProveedor tipoProveedor, String nombreContacto, String numeroContacto) {
         this.proveedorID = proveedorID;
         this.personaID = personaID;
         this.tipoProveedor = tipoProveedor;
@@ -18,8 +21,7 @@ public class Proveedor extends Persona {
         this.numeroContacto = numeroContacto;
     }
 
-    public Proveedor(int proveedorID, int personaID, String tipoProveedor, String nombreContacto, String numeroContacto, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
-        super(numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo);
+    public Proveedor(int proveedorID, int personaID, TipoProveedor tipoProveedor, String nombreContacto, String numeroContacto, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
         this.proveedorID = proveedorID;
         this.personaID = personaID;
         this.tipoProveedor = tipoProveedor;
@@ -43,11 +45,11 @@ public class Proveedor extends Persona {
         this.personaID = personaID;
     }
 
-    public String getTipoProveedor() {
+    public TipoProveedor getTipoProveedor() {
         return tipoProveedor;
     }
 
-    public void setTipoProveedor(String tipoProveedor) {
+    public void setTipoProveedor(TipoProveedor tipoProveedor) {
         this.tipoProveedor = tipoProveedor;
     }
 
@@ -75,11 +77,11 @@ public class Proveedor extends Persona {
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -124,6 +126,3 @@ public class Proveedor extends Persona {
     }
     
     }
-    
-
-

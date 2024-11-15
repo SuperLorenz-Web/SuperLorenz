@@ -1,10 +1,12 @@
 package co.edu.konradlorenz.model;
 
+import co.edu.konradlorenz.model.enums.*;
+
 public abstract class Persona {
     
     protected int personaID;
     protected String numeroDocumento;
-    protected String tipoDocumento;
+    protected TipoDocumento tipoDocumento;
     protected String nombres;
     protected String apellidos;
     protected String celular;
@@ -14,14 +16,12 @@ public abstract class Persona {
     public Persona() {
     }
 
-    public Persona(String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
-        this.numeroDocumento = numeroDocumento;
-        this.tipoDocumento = tipoDocumento;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.celular = celular;
-        this.correo = correo;
-        this.password = password;
+    public int getPersonaID() {
+        return personaID;
+    }
+
+    public void setPersonaID(int personaID) {
+        this.personaID = personaID;
     }
 
     public String getNumeroDocumento() {
@@ -32,11 +32,11 @@ public abstract class Persona {
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -71,20 +71,14 @@ public abstract class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    public String getPassword(){
+
+    public String getPassword() {
         return password;
     }
-    public void setPassword(String correo){
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "personaID=" + personaID + ", numeroDocumento=" + numeroDocumento + ", tipoDocumento=" + tipoDocumento + ", nombres=" + nombres + ", apellidos=" + apellidos + ", celular=" + celular + ", correo=" + correo + ", password=" + password + '}';
-    }
-
 }
-
-    
-
-   
+//class

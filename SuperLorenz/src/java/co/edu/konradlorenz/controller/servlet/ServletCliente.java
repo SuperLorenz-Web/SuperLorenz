@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.text.*;
 import java.util.*;
 
-@WebServlet("/ServletCliente")
 public class ServletCliente extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -36,7 +35,7 @@ public class ServletCliente extends HttpServlet {
             String direccion = request.getParameter("direccion");
             //Conversión de fecha de String a Date
                 String fechaStr = request.getParameter("fechaNacimiento");
-                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                 Date fechaNacimiento = formatter.parse(fechaStr);
             EstadoCivil estadoCivil = EstadoCivil.valueOf(request.getParameter("estadoCivil"));
             boolean autorizacionDeDatos = Boolean.parseBoolean(request.getParameter("autorizacionDeDatos"));

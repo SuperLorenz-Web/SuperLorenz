@@ -1,44 +1,20 @@
 package co.edu.konradlorenz.model;
 
+import co.edu.konradlorenz.model.enums.*;
+
 public class Empleado extends Persona{
-    
     
     private int empleadoID;
     private int personaID;
     private String cargo;
-    private String dependencia;
-    private String tipoContrato;
+    private Dependencia dependencia;
+    private TipoContrato tipoContrato;
     private String eps;
     private String arl;
     private String nombreEmergencia;
     private String celularEmergencia;
 
     public Empleado() {
-    }
-
-    public Empleado(int empleadoID, int personaID, String cargo, String dependencia, String tipoContrato, String eps, String arl, String nombreEmergencia, String celularEmergencia) {
-        this.empleadoID = empleadoID;
-        this.personaID = personaID;
-        this.cargo = cargo;
-        this.dependencia = dependencia;
-        this.tipoContrato = tipoContrato;
-        this.eps = eps;
-        this.arl = arl;
-        this.nombreEmergencia = nombreEmergencia;
-        this.celularEmergencia = celularEmergencia;
-    }
-
-    public Empleado(int empleadoID, int personaID, String cargo, String dependencia, String tipoContrato, String eps, String arl, String nombreEmergencia, String celularEmergencia, String numeroDocumento, String tipoDocumento, String nombres, String apellidos, String celular, String correo) {
-        super(numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo);
-        this.empleadoID = empleadoID;
-        this.personaID = personaID;
-        this.cargo = cargo;
-        this.dependencia = dependencia;
-        this.tipoContrato = tipoContrato;
-        this.eps = eps;
-        this.arl = arl;
-        this.nombreEmergencia = nombreEmergencia;
-        this.celularEmergencia = celularEmergencia;
     }
 
     public int getEmpleadoID() {
@@ -65,19 +41,19 @@ public class Empleado extends Persona{
         this.cargo = cargo;
     }
 
-    public String getDependencia() {
+    public Dependencia getDependencia() {
         return dependencia;
     }
 
-    public void setDependencia(String dependencia) {
+    public void setDependencia(Dependencia dependencia) {
         this.dependencia = dependencia;
     }
 
-    public String getTipoContrato() {
+    public TipoContrato getTipoContrato() {
         return tipoContrato;
     }
 
-    public void setTipoContrato(String tipoContrato) {
+    public void setTipoContrato(TipoContrato tipoContrato) {
         this.tipoContrato = tipoContrato;
     }
 
@@ -120,11 +96,11 @@ public class Empleado extends Persona{
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
