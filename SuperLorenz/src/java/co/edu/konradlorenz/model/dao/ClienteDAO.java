@@ -10,15 +10,14 @@ import java.sql.SQLException;
 
 public class ClienteDAO {
     
+    private static int status = 0;
+    private static Connection connection = null;
+    private static PreparedStatement personaStmt = null;
+    private static PreparedStatement clienteStmt = null;
+    private static ResultSet resultSet = null;
+    
+    //Abre: agregarCliente
     public static int agregarCliente(Cliente cliente){
-
-        int status = 0;
-        Connection connection = null;
-        PreparedStatement personaStmt = null;
-        PreparedStatement clienteStmt = null;
-        ResultSet generatedKeys = null;
-        
-        //ResultSet resultSet; 
         
         try {
             //Crea la conexión
@@ -26,8 +25,10 @@ public class ClienteDAO {
             connection = conexion.crearConexion();
             
             //Insert de Persona
-            String personaQuery="INSERT INTO Persona (numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo, password)\n" +
-                                "VALUES (?, ?, ?, ?, ?, ?, ?);";
+            String personaQuery="""
+                                INSERT INTO Persona (numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo, password)
+                                VALUES (?, ?, ?, ?, ?, ?, ?);
+                                """;
             
             personaStmt = connection.prepareStatement(personaQuery, PreparedStatement.RETURN_GENERATED_KEYS);
             
@@ -42,17 +43,19 @@ public class ClienteDAO {
             personaStmt.executeUpdate();
             
             //Obtener personaID generado
-            generatedKeys = personaStmt.getGeneratedKeys();//Aquí se obtiene personaID
+            resultSet = personaStmt.getGeneratedKeys();//Aquí se obtiene personaID
             int personaID = 0;
-            if (generatedKeys.next()) {
-                personaID = generatedKeys.getInt(1);
+            if (resultSet.next()) {
+                personaID = resultSet.getInt(1);
             }
             
             //Insert de Cliente
-            String clienteQuery="INSERT INTO Cliente (personaID, tipoCliente, direccion, fechaNacimiento, estadoCivil, autorizacionDeDatos)\n" +
-                                "VALUES (?, ?, ?, ?, ?, ?);";
+            String query =  """
+                            INSERT INTO Cliente (personaID, tipoCliente, direccion, fechaNacimiento, estadoCivil, autorizacionDeDatos)
+                            VALUES (?, ?, ?, ?, ?, ?);
+                            """;
             
-            clienteStmt = connection.prepareStatement(clienteQuery);
+            clienteStmt = connection.prepareStatement(query);
             
             clienteStmt.setInt(1, personaID);//personaID antes obtenido.
             clienteStmt.setString(2, cliente.getTipoCliente().name());//.name() convierte enum a String
@@ -64,12 +67,12 @@ public class ClienteDAO {
             status = clienteStmt.executeUpdate();
             
             System.out.print("REGISTRO GUARDADO DE FORMA EXITOSA...");
-        } catch (SQLException ex) {
+        } catch (SQLException e) {
             System.out.println("ERROR AL REGISTRAR LA ACTIVIDAD...");
-            ex.printStackTrace();
+            e.printStackTrace();
         } finally {
             //Cerrar recursos
-            try { if (generatedKeys != null) generatedKeys.close(); } catch (SQLException e) { e.printStackTrace(); }
+            try { if (resultSet != null) resultSet.close(); } catch (SQLException e) { e.printStackTrace(); }
             try { if (personaStmt != null) personaStmt.close(); } catch (SQLException e) { e.printStackTrace(); }
             try { if (clienteStmt != null) clienteStmt.close(); } catch (SQLException e) { e.printStackTrace(); }
             try { if (connection != null) connection.close(); } catch (SQLException e) { e.printStackTrace(); }
@@ -77,6 +80,51 @@ public class ClienteDAO {
         
         return status;
     }
-    //agregarCliente
+    //Cierra: agregarCliente
+    
+    //Abre: iniciarSesion
+    public static Cliente iniciarSesion(String correo, String password){
+        
+        Cliente cliente = null;
+            
+            try {
+                
+                Conexion conexion = new Conexion();
+                connection = conexion.crearConexion();
+                
+                String query =  """
+                                SELECT *
+                                FROM Persona p
+                                INNER JOIN Cliente c
+                                ON p.personaID = c.personaID
+                                WHERE correo = ? AND password = ?;
+                                """;
+                
+                personaStmt = (PreparedStatement)connection.prepareStatement(query);
+                personaStmt.setString(1, correo);
+                personaStmt.setString(2, password);
+                
+                resultSet = personaStmt.executeQuery();
+                
+                if(resultSet.next()) {
+                    cliente = new Cliente();
+                    cliente.setCorreo(resultSet.getString("correo"));
+                    cliente.setPassword(resultSet.getString("contraseña"));
+                }
+                
+                System.out.print("CLIENTE LOGEADO DE FORMA EXITOSA...");
+            } catch (SQLException e) {
+                System.out.println("ERROR AL LOGEAR CLIENTE...");
+                e.printStackTrace();
+            } finally {
+                //Cerrar recursos
+                try { if (resultSet != null) resultSet.close(); } catch (SQLException e) { e.printStackTrace(); }
+                try { if (personaStmt != null) personaStmt.close(); } catch (SQLException e) { e.printStackTrace(); }
+                try { if (connection != null) connection.close(); } catch (SQLException e) { e.printStackTrace(); }
+            }
+        return cliente;
+    }
+    //Cierra: iniciarSesion
+    
 }
-//class
+//Cierra: class
