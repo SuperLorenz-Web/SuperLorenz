@@ -7,8 +7,8 @@ public class Empleado extends Persona{
     private int empleadoID;
     private int personaID;
     private String cargo;
-    private String dependencia;
-    private String tipoContrato;
+    private Dependencia dependencia;
+    private TipoContrato tipoContrato;
     private String eps;
     private String arl;
     private String nombreEmergencia;
@@ -41,19 +41,19 @@ public class Empleado extends Persona{
         this.cargo = cargo;
     }
 
-    public String getDependencia() {
+    public Dependencia getDependencia() {
         return dependencia;
     }
 
-    public void setDependencia(String dependencia) {
+    public void setDependencia(Dependencia dependencia) {
         this.dependencia = dependencia;
     }
 
-    public String getTipoContrato() {
+    public TipoContrato getTipoContrato() {
         return tipoContrato;
     }
 
-    public void setTipoContrato(String tipoContrato) {
+    public void setTipoContrato(TipoContrato tipoContrato) {
         this.tipoContrato = tipoContrato;
     }
 
