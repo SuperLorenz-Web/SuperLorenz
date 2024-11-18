@@ -1,9 +1,15 @@
 <%-- 
     Document   : cliente
+<<<<<<< HEAD
     Created on : 7/11/2024, 8:33:24 p. m.
     Author     : usuario
 --%>
 import 
+=======
+    Created on : 18/11/2024, 5:19:39 p. m.
+    Author     : Usuario
+--%>
+>>>>>>> 18fe666 (Conexión base datos - interfaces)
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,11 +19,15 @@ import
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperLorenz</title>
     <style>
+<<<<<<< HEAD
         /* CSS Unificado */
+=======
+>>>>>>> 18fe666 (Conexión base datos - interfaces)
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+<<<<<<< HEAD
         }
 
         body {
@@ -35,16 +45,41 @@ import
         }
 
         .logo {
+=======
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ddd;
+        }
+
+        /* Encabezado */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #a168a3;
+            padding: 10px;
+            color: white;
+        }
+
+        .header .logo {
+>>>>>>> 18fe666 (Conexión base datos - interfaces)
             display: flex;
             align-items: center;
         }
 
+<<<<<<< HEAD
         .logo img {
+=======
+        .header .logo img {
+>>>>>>> 18fe666 (Conexión base datos - interfaces)
             width: 40px;
             height: 40px;
             margin-right: 10px;
         }
 
+<<<<<<< HEAD
         .search-bar {
             display: flex;
             align-items: center;
@@ -320,3 +355,167 @@ import
 </html>
 
 
+=======
+        .header .user-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .user-info span {
+            cursor: pointer;
+        }
+
+        .header .user-info span:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 200px;
+            background-color: #6a2f88;
+            padding: 20px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #8c4ea8;
+        }
+
+        /* Sección de contenido */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-header input[type="button"] {
+            background-color: #a168a3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-header input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .content-header input[type="text"]:focus {
+            border-color: #a168a3;
+        }
+
+        /* Tabla de contenido */
+        .table-container {
+            background-color: #b48ebf;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            background-color: #d8aad7;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 0 10px;
+            align-items: center;
+        }
+
+        .table-row:hover {
+            background-color: #b78cd5;
+        }
+
+        .table-row .cell {
+            flex: 1;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>SuperLorenz</h1>
+        </div>
+        <div class="user-info">
+            <span>¡Hola Pepito!</span>
+            <span>Cerrar Sesión</span>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <ul>
+                <li>Mi Cuenta</li>
+                <li>Proveedores</li>
+                <li>Clientes</li>
+                <li>Compras de Insumos</li>
+                <li>Productos</li>
+                <li>Pedidos</li>
+                <li>Kárdex</li>
+            </ul>
+        </div>
+
+        <!-- Sección de contenido -->
+        <div class="content">
+            <!-- Encabezado de la sección de contenido -->
+            <div class="content-header">
+                <input type="button" value="Nuevo ########">
+                <input type="text" placeholder="Buscar...">
+            </div>
+
+            <!-- Tabla de contenido -->
+            <div class="table-container">
+                <!-- Filas de la tabla (simulación) -->
+                <div class="table-row">
+                    <div class="cell">Producto 1</div>
+                    <div class="cell">Descripción 1</div>
+                    <div class="cell">Precio</div>
+                </div>
+                <div class="table-row">
+                    <div class="cell">Producto 2</div>
+                    <div class="cell">Descripción 2</div>
+                    <div class="cell">Precio</div>
+                </div>
+                <div class="table-row">
+                    <div class="cell">Producto 3</div>
+                    <div class="cell">Descripción 3</div>
+                    <div class="cell">Precio</div>
+                </div>
+                <!-- Más filas -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+>>>>>>> 18fe666 (Conexión base datos - interfaces)

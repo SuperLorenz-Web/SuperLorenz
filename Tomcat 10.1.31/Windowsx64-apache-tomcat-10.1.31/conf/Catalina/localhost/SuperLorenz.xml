@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <Context docBase="C:\Users\USUARIO\Desktop\Taller\SuperLorenz\SuperLorenz\build\web" path="/SuperLorenz"/>
+=======
+<Context docBase="C:\Users\Usuario\Downloads\SuperLorenz\SuperLorenz\build\web" path="/SuperLorenz"/>
+>>>>>>> 18fe666 (Conexión base datos - interfaces)
