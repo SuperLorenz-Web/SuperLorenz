@@ -1,5 +1,3 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -72,7 +70,7 @@
             background-color: #8c4ea8;
         }
 
-        /* Secci贸n de contenido */
+        /* Secci髇 de contenido */
         .content {
             flex-grow: 1;
             padding: 20px;
@@ -122,7 +120,6 @@
             flex: 1;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -134,8 +131,8 @@
             <h1>SuperLorenz</h1>
         </div>
         <div class="user-info">
-            <span>隆Hola Juan!</span>
-            <span>Cerrar Sesi贸n</span>
+            <span>ola Juan!</span>
+            <span>Cerrar Sesi髇</span>
         </div>
     </div>
 
@@ -150,9 +147,9 @@
             </ul>
         </div>
 
-        <!-- Secci贸n de contenido -->
+        <!-- Secci髇 de contenido -->
         <div class="content">
-            <!-- Encabezado de la secci贸n de contenido -->
+            <!-- Encabezado de la secci髇 de contenido -->
             <div class="content-header">
                 <input type="button" value="Nuevo Proveedor">
                 <input type="text" placeholder="Buscar proveedor...">
@@ -160,29 +157,30 @@
 
             <!-- Tabla de proveedores -->
             <div class="table-container">
-                <!-- Filas de la tabla (simulaci贸n) -->
+                <!-- Filas de la tabla (simulaci髇) -->
                 <div class="table-row">
                     <div class="cell">Proveedor #001</div>
                     <div class="cell">Proveedor A</div>
                     <div class="cell">Activo</div>
-                    <div class="cell">Ver Detalles</div>
+                    <div class="cell"><a href="#">Ver Detalles</a></div>
                 </div>
                 <div class="table-row">
                     <div class="cell">Proveedor #002</div>
                     <div class="cell">Proveedor B</div>
                     <div class="cell">Inactivo</div>
-                    <div class="cell">Ver Detalles</div>
+                    <div class="cell"><a href="#">Ver Detalles</a></div>
                 </div>
                 <div class="table-row">
                     <div class="cell">Proveedor #003</div>
                     <div class="cell">Proveedor C</div>
                     <div class="cell">Activo</div>
-                    <div class="cell">Ver Detalles</div>
+                    <div class="cell"><a href="#">Ver Detalles</a></div>
                 </div>
-                <!-- M谩s filas -->
+                <!-- M醩 filas -->
             </div>
         </div>
     </div>
 
 </body>
 </html>
+

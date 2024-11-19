@@ -1,3 +1,9 @@
+<%-- 
+    Document   : empleado
+    Created on : 18/11/2024, 5:19:51 p. m.
+    Author     : Usuario
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>

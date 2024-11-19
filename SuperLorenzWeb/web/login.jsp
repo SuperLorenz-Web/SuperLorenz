@@ -1,11 +1,7 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de SesiÃ³n - SuperLorenz</title>
+    <title>Inicio de Sesión - SuperLorenz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -96,17 +92,17 @@
 </head>
 <body>
     <form id="loginForm" name="loginForm" action="ServletPersona" method="POST">
-        <h1>Iniciar SesiÃ³n</h1>
-        <label for="cedula">CÃ©dula:</label>
-        <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cÃ©dula" required>
+        <h1>Iniciar Sesión</h1>
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cédula" required>
 
-        <label for="password">ContraseÃ±a:</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseÃ±a" required>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
 
         <button type="submit">Ingresar</button>
         <div class="extra-options">
-            <p>Â¿Olvidaste tu contraseÃ±a? <a href="#">Recuperarla</a></p>
-            <p>Â¿No tienes cuenta? <a href="#">RegÃ­strate</a></p>
+            <p>¿Olvidaste tu contraseña? <a href="#">Recuperarla</a></p>
+            <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
         </div>
     </form>
 </body>

@@ -35,38 +35,3 @@ public class Conexion {
         return con;
     }
 }
-
-/*
-public class Conexion {
-    
-    public static String user = "root";
-    public static String password = "G01fukl*";
-    public static String server = "localhost:3306";
-    public static String BD = "SuperLorenz";
-    
-    public Connection crearConexion() {
-        
-        Connection connection = null;
-        
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String URL="jdbc:mysql://"+server+"/"+BD;
-            connection=DriverManager.getConnection(URL, user,password);
-        } catch(java.lang.ClassNotFoundException ex) {
-            System.out.println("classnotfound");
-        } catch(SQLException e) {
-            System.out.println("error de enlace canal");
-        }
-        
-        return connection;
-    }
-    //crearConexion
-
-    Statement createStatement() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    //createStatement
-    
-}
-//class
-*/
