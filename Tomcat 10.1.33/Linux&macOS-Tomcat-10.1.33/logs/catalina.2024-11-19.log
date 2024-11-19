@@ -1,0 +1,501 @@
+19-Nov-2024 15:22:28.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.33
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 7 2024 22:28:55 UTC
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.33.0
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            15.2
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.4+7-LTS
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:22:28.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/logging.properties
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Brians-MacBook-Air
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:22:28.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/temp
+19-Nov-2024 15:22:28.907 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/brian/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+19-Nov-2024 15:22:29.073 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:22:29.091 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [338] milliseconds
+19-Nov-2024 15:22:29.116 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2024 15:22:29.116 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.33]
+19-Nov-2024 15:22:29.122 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs]
+19-Nov-2024 15:22:29.286 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs] has finished in [164] ms
+19-Nov-2024 15:22:29.286 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager]
+19-Nov-2024 15:22:29.312 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager] has finished in [26] ms
+19-Nov-2024 15:22:29.312 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples]
+19-Nov-2024 15:22:29.449 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples] has finished in [137] ms
+19-Nov-2024 15:22:29.449 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT]
+19-Nov-2024 15:22:29.459 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT] has finished in [10] ms
+19-Nov-2024 15:22:29.459 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager]
+19-Nov-2024 15:22:29.479 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager] has finished in [20] ms
+19-Nov-2024 15:22:29.482 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:22:29.489 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [397] milliseconds
+19-Nov-2024 15:22:31.653 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:22:31.653 WARNING [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:22:31.684 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [31] ms
+19-Nov-2024 15:22:31.689 INFO [http-nio-8080-exec-2] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SuperLorenz]] after start() had already been called. The second call will be ignored.
+19-Nov-2024 15:23:20.060 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:23:20.096 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:23:20.098 WARNING [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:23:20.103 SEVERE [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@74afa9dc]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:23:20.106 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [9] ms
+19-Nov-2024 15:24:04.312 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:24:04.326 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:24:04.328 WARNING [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:24:04.394 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [68] ms
+19-Nov-2024 15:26:00.792 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:26:00.827 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:26:00.829 WARNING [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:26:00.834 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@687766bc]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:26:00.835 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [8] ms
+19-Nov-2024 15:26:13.243 INFO [http-nio-8080-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:26:13.253 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:26:13.255 WARNING [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:26:13.296 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [43] ms
+19-Nov-2024 15:27:51.460 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:27:51.486 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:27:51.487 WARNING [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:27:51.490 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@69f63898]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:27:51.491 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [6] ms
+19-Nov-2024 15:28:09.545 INFO [http-nio-8080-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:28:09.553 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:28:09.554 WARNING [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:28:09.577 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [24] ms
+19-Nov-2024 15:28:32.036 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:28:32.063 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:28:32.065 WARNING [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:28:32.070 SEVERE [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@2f7993c8]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:28:32.071 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [8] ms
+19-Nov-2024 15:28:43.806 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:28:43.820 INFO [http-nio-8080-exec-27] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:28:43.822 WARNING [http-nio-8080-exec-27] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:28:43.857 INFO [http-nio-8080-exec-27] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [37] ms
+19-Nov-2024 15:38:11.712 INFO [http-nio-8080-exec-36] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:38:19.899 INFO [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:38:19.905 WARNING [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:38:19.948 INFO [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [48] ms
+19-Nov-2024 15:38:19.951 INFO [http-nio-8080-exec-45] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SuperLorenz]] after start() had already been called. The second call will be ignored.
+19-Nov-2024 15:38:28.320 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SuperLorenz] has started
+19-Nov-2024 15:38:28.362 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SuperLorenz] is completed
+19-Nov-2024 15:39:28.438 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2024 15:39:28.438 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:39:28.445 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2024 15:39:28.459 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:39:28.476 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:41:25.079 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.33
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 7 2024 22:28:55 UTC
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.33.0
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            15.2
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.4+7-LTS
+19-Nov-2024 15:41:25.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+19-Nov-2024 15:41:25.082 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:41:25.082 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/logging.properties
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Brians-MacBook-Air
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2024 15:41:25.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2024 15:41:25.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2024 15:41:25.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2024 15:41:25.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:41:25.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:41:25.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/temp
+19-Nov-2024 15:41:25.096 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/brian/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+19-Nov-2024 15:41:25.248 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:41:25.265 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [268] milliseconds
+19-Nov-2024 15:41:25.288 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2024 15:41:25.289 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.33]
+19-Nov-2024 15:41:25.294 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:41:25.302 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:41:25.477 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [183] ms
+19-Nov-2024 15:41:25.477 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs]
+19-Nov-2024 15:41:25.490 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs] has finished in [13] ms
+19-Nov-2024 15:41:25.490 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager]
+19-Nov-2024 15:41:25.512 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager] has finished in [22] ms
+19-Nov-2024 15:41:25.512 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples]
+19-Nov-2024 15:41:25.620 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples] has finished in [108] ms
+19-Nov-2024 15:41:25.620 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT]
+19-Nov-2024 15:41:25.631 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT] has finished in [11] ms
+19-Nov-2024 15:41:25.631 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager]
+19-Nov-2024 15:41:25.641 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager] has finished in [9] ms
+19-Nov-2024 15:41:25.642 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:41:25.647 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [381] milliseconds
+19-Nov-2024 15:41:27.624 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:41:27.637 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:41:27.638 WARNING [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:41:27.654 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [17] ms
+19-Nov-2024 15:41:27.658 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SuperLorenz]] after start() had already been called. The second call will be ignored.
+19-Nov-2024 15:42:06.165 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:42:06.188 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:42:06.192 WARNING [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:42:06.196 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@a308070]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:42:06.197 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [10] ms
+19-Nov-2024 15:42:51.888 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:42:51.893 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:42:51.895 WARNING [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:42:51.920 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [26] ms
+19-Nov-2024 15:43:01.693 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:43:01.712 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:43:01.715 WARNING [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:43:01.752 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [40] ms
+19-Nov-2024 15:43:01.756 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SuperLorenz]] after start() had already been called. The second call will be ignored.
+19-Nov-2024 15:43:22.921 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2024 15:43:22.921 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:43:22.924 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2024 15:43:22.934 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:43:22.937 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:43:53.314 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.33
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 7 2024 22:28:55 UTC
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.33.0
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            15.2
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.4+7-LTS
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:43:53.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:43:53.323 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/logging.properties
+19-Nov-2024 15:43:53.323 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Brians-MacBook-Air
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2024 15:43:53.324 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2024 15:43:53.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:43:53.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:43:53.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/temp
+19-Nov-2024 15:43:53.333 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/brian/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+19-Nov-2024 15:43:53.497 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:43:53.511 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [280] milliseconds
+19-Nov-2024 15:43:53.531 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2024 15:43:53.531 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.33]
+19-Nov-2024 15:43:53.535 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:43:53.542 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:43:53.714 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [179] ms
+19-Nov-2024 15:43:53.715 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs]
+19-Nov-2024 15:43:53.730 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs] has finished in [15] ms
+19-Nov-2024 15:43:53.731 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager]
+19-Nov-2024 15:43:53.749 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager] has finished in [18] ms
+19-Nov-2024 15:43:53.749 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples]
+19-Nov-2024 15:43:53.863 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples] has finished in [114] ms
+19-Nov-2024 15:43:53.864 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT]
+19-Nov-2024 15:43:53.877 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT] has finished in [13] ms
+19-Nov-2024 15:43:53.877 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager]
+19-Nov-2024 15:43:53.890 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager] has finished in [13] ms
+19-Nov-2024 15:43:53.892 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:43:53.897 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [385] milliseconds
+19-Nov-2024 15:44:14.410 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:44:14.434 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:44:14.437 WARNING [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:44:14.440 SEVERE [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:635)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:530)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:421)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1678)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@3ca125f3]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4121)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4243)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/SuperLorenzWeb/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 28 more
+19-Nov-2024 15:44:14.441 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [7] ms
+19-Nov-2024 15:44:25.161 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2024 15:44:25.165 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:44:25.167 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2024 15:44:25.174 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:44:25.178 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:46:12.166 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.33
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 7 2024 22:28:55 UTC
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.33.0
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            15.2
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.4+7-LTS
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:46:12.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:46:12.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/logging.properties
+19-Nov-2024 15:46:12.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2024 15:46:12.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Brians-MacBook-Air
+19-Nov-2024 15:46:12.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33
+19-Nov-2024 15:46:12.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/temp
+19-Nov-2024 15:46:12.182 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/brian/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+19-Nov-2024 15:46:12.354 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:46:12.369 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [290] milliseconds
+19-Nov-2024 15:46:12.395 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2024 15:46:12.395 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.33]
+19-Nov-2024 15:46:12.401 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:46:12.410 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:46:12.573 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [172] ms
+19-Nov-2024 15:46:12.573 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs]
+19-Nov-2024 15:46:12.587 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/docs] has finished in [14] ms
+19-Nov-2024 15:46:12.587 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager]
+19-Nov-2024 15:46:12.608 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/manager] has finished in [21] ms
+19-Nov-2024 15:46:12.609 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples]
+19-Nov-2024 15:46:12.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/examples] has finished in [108] ms
+19-Nov-2024 15:46:12.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT]
+19-Nov-2024 15:46:12.726 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/ROOT] has finished in [8] ms
+19-Nov-2024 15:46:12.726 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager]
+19-Nov-2024 15:46:12.737 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/webapps/host-manager] has finished in [11] ms
+19-Nov-2024 15:46:12.739 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2024 15:46:12.745 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [375] milliseconds
+19-Nov-2024 15:46:14.226 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SuperLorenz]
+19-Nov-2024 15:46:14.243 INFO [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml]
+19-Nov-2024 15:46:14.244 WARNING [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SuperLorenz] in deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has been ignored
+19-Nov-2024 15:46:14.276 INFO [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/Users/brian/Documents/GitHub/Bases-de-Datos-I/SuperLorenz/Tomcat 10.1.33/Linux&macOS-Tomcat-10.1.33/conf/Catalina/localhost/SuperLorenz.xml] has finished in [32] ms
