@@ -30,9 +30,9 @@ public class ServletEmpleado extends HttpServlet {
 
                 // Redirigir según el tipo de usuario
                 if ("EMPLEADO".equals(tipoUsuario)) {
-                    response.sendRedirect("portalEmpleado.jsp"); // Página para empleados
+                    response.sendRedirect("empleado.jsp"); // Página para clientes
                 } else if ("ADMIN".equals(tipoUsuario)) {
-                    response.sendRedirect("portalAdmin.jsp"); // Página para administradores
+                    response.sendRedirect("admin.jsp"); // Página para empleados
                 } else {
                     out.println("<h1>Tipo de usuario no reconocido.</h1>");
                 }
@@ -43,7 +43,5 @@ public class ServletEmpleado extends HttpServlet {
         }
     }
 }
-
-
 
 
