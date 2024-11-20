@@ -53,6 +53,7 @@ public class ProductoDAO {
                 producto.setDescripcionProducto(resultSet.getString("descripcionProducto"));
                 producto.setCategoria(resultSet.getString("categoria"));
                 producto.setMarca(resultSet.getString("marca"));
+                producto.setImagenURL(resultSet.getString("imagenURL"));
                 productos.add(producto);
                 
             }

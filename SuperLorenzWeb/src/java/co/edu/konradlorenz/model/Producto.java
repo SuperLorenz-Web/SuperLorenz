@@ -8,6 +8,7 @@ public class Producto {
     private String descripcionProducto;
     private String categoria;
     private String marca;
+    private String imagenURL;
     
     public Producto(){
     }
@@ -50,6 +51,14 @@ public class Producto {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public String getImagenURL() {
+        return imagenURL;
+    }
+
+    public void setImagenURL(String imagenURL) {
+        this.imagenURL = imagenURL;
     }
     
     

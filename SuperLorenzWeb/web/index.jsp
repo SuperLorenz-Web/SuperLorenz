@@ -255,7 +255,7 @@
                         Precio precioCorrespondiente = (precios != null && !precios.isEmpty()) ? precios.get(0) : null; // Tomamos el primer precio disponible
                 %>
                     <div class="product-card">
-                        <img src="imagenes/imagen1.png" alt="<%= producto.getNombreProducto() %>" class="product-image">
+                        <img src="<%= producto.getImagenURL() != null ? producto.getImagenURL() : "imagenes/imagen1.png" %>" alt="<%= producto.getNombreProducto() %>" class="product-image">
                         <h3><%= producto.getNombreProducto() %></h3>
                         <p><%= producto.getDescripcionProducto() %></p>
                         <span class="price">$ <%= precioCorrespondiente != null ? precioCorrespondiente.getPrecioUnitarioTotal() : 0.0 %></span>
