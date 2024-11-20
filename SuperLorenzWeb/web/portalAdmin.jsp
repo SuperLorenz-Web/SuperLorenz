@@ -63,8 +63,8 @@
         <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
         <h2>Menú Administrador</h2>
         <ul>
-            <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
-            <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
+            <li><a href="admin-products.html">Ver Productos</a></li>
+            <li><a href="buy-supplies.html">Comprar Insumos</a></li>
             <li><a href="sell-products.html">Venta de Productos</a></li>
             <li><a href="kardex.html">Kardex</a></li>
             <li><a href="view-suppliers.html">Ver Proveedores</a></li>
