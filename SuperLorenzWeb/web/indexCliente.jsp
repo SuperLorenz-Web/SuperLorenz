@@ -1,4 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="co.edu.konradlorenz.model.*" %>
+<%@page import="co.edu.konradlorenz.model.dao.*" %>
+<%@page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -193,7 +196,7 @@
         </div>
         <nav>
             <button class="nav-button" onclick="goToCart()">Carrito</button>
-            <span class="user-text">¡Hola Pepito!</span>
+            <span class="user-text">¡Hola ${nombres}!</span>
             <button class="nav-button" onclick="logout()">Cerrar Sesión</button>
         </nav>
     </header>

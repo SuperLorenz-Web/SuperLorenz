@@ -2,6 +2,7 @@ package co.edu.konradlorenz.model.dao;
 
 import co.edu.konradlorenz.model.connection.Conexion;
 import co.edu.konradlorenz.model.Persona;
+import co.edu.konradlorenz.model.enums.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,6 +30,35 @@ public class PersonaDAO {
         }
         return credencialesValidas;
     }
+    
+    public Persona obtenerPorCorreo(String correo) {
+        Persona persona = null;
+        String query = "SELECT * FROM Persona WHERE correo = ?";
+        try (Connection con = conexionBD.crearConexion()) {
+            try (PreparedStatement ps = con.prepareStatement(query)) {
+                ps.setString(1, correo);
+
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        persona = new Persona();
+                        persona.setPersonaID(rs.getInt("personaID"));
+                        persona.setNombres(rs.getString("nombres"));
+                        persona.setApellidos(rs.getString("nombres"));
+                        persona.setNumeroDocumento(rs.getString("numeroDocumento"));
+                        String tipoDocumentoStr = rs.getString("tipoDocumento"); // Suponiendo que el valor en la base de datos es un String
+                        persona.setTipoDocumento(TipoDocumento.valueOf(tipoDocumentoStr));
+                        persona.setCelular(rs.getString("celular"));
+                        persona.setCorreo(rs.getString("correo"));
+                        persona.setPassword(rs.getString("password"));
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return persona;
+    }
+}
 /*
     // Método para obtener el tipo de usuario (Cliente, Proveedor, Empleado)
     public String obtenerTipoUsuario(String numeroDocumento) {
@@ -83,4 +113,3 @@ public class PersonaDAO {
         return tipoUsuario;
     }
     */
-}

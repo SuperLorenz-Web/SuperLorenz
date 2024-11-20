@@ -25,12 +25,10 @@ public class ClienteDAO {
             connection = conexion.crearConexion();
             
             //Insert de Persona
-            String personaQuery="""
-                                INSERT INTO Persona (numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo, password)
-                                VALUES (?, ?, ?, ?, ?, ?, ?);
-                                """;
+            String query = "INSERT INTO Persona (numeroDocumento, tipoDocumento, nombres, apellidos, celular, correo, password)"
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?)";
             
-            personaStmt = connection.prepareStatement(personaQuery, PreparedStatement.RETURN_GENERATED_KEYS);
+            personaStmt = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
             
             personaStmt.setString(1, cliente.getNumeroDocumento());
             personaStmt.setString(2, cliente.getTipoDocumento().name());//.name() convierte enum a String
@@ -50,10 +48,7 @@ public class ClienteDAO {
             }
             
             //Insert de Cliente
-            String query =  """
-                            INSERT INTO Cliente (personaID, tipoCliente, direccion, fechaNacimiento, estadoCivil, autorizacionDeDatos)
-                            VALUES (?, ?, ?, ?, ?, ?);
-                            """;
+            query =  "INSERT INTO Cliente (personaID, tipoCliente, direccion, fechaNacimiento, estadoCivil, autorizacionDeDatos) VALUES (?, ?, ?, ?, ?, ?);";
             
             clienteStmt = connection.prepareStatement(query);
             

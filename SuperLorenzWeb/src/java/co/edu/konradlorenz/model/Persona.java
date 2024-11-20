@@ -2,7 +2,7 @@ package co.edu.konradlorenz.model;
 
 import co.edu.konradlorenz.model.enums.*;
 
-public abstract class Persona {
+public class Persona {
     
     protected int personaID;
     protected String numeroDocumento;

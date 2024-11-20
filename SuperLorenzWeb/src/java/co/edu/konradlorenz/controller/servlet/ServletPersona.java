@@ -1,6 +1,7 @@
 package co.edu.konradlorenz.controller.servlet;
 
 import co.edu.konradlorenz.model.dao.PersonaDAO;
+import co.edu.konradlorenz.model.Persona;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,14 +20,20 @@ public class ServletPersona extends HttpServlet {
         // Obtener datos del formulario
         String correo = request.getParameter("email");
         String password = request.getParameter("password");
+        
+        // Validar credenciales
+        if (personaDAO.validarCredenciales(correo, password)) {
+            // Obtener el usuario autenticado
+            Persona persona = personaDAO.obtenerPorCorreo(correo); // Método que retorna la persona
 
-        // Responder al cliente
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            if (personaDAO.validarCredenciales(correo, password)) {
-                // Si las credenciales son válidas, redirigir a la página genérica de usuario
-                response.sendRedirect("cliente.jsp"); // Página genérica de usuario
-            } else {
+            // Guardar el nombre del usuario en la sesión
+            request.getSession().setAttribute("nombres", persona.getNombres());
+
+            // Redirigir a cliente.jsp
+            response.sendRedirect("indexCliente.jsp");
+        } else {
+            response.setContentType("text/html;charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
                 out.println("<h1>Error: Credenciales incorrectas</h1>");
                 out.println("<p>Por favor, intenta nuevamente.</p>");
             }
