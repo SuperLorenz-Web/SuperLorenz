@@ -287,7 +287,7 @@
                 window.location.href = 'loginCliente.jsp';
             }
             function goToLoginEmpleado() {
-                window.location.href = 'loginempleadoadmin.jsp';
+                window.location.href = 'loginEmpleadoAdmin.jsp';
             }
             function goToCart() {
                 window.location.href = 'carrito.jsp';
