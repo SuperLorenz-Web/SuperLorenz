@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -70,7 +72,7 @@
             background-color: #8c4ea8;
         }
 
-        /* Secci髇 de contenido */
+        /* Secci贸n de contenido */
         .content {
             flex-grow: 1;
             padding: 20px;
@@ -127,12 +129,12 @@
     <!-- Encabezado -->
     <div class="header">
         <div class="logo">
-            <img src="img/logo.png" alt="Logo">
+            <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
             <h1>SuperLorenz</h1>
         </div>
         <div class="user-info">
-            <span>ola Juan!</span>
-            <span>Cerrar Sesi髇</span>
+            <span>隆Hola Juan!</span>
+            <span>Cerrar Sesi贸n</span>
         </div>
     </div>
 
@@ -147,9 +149,9 @@
             </ul>
         </div>
 
-        <!-- Secci髇 de contenido -->
+        <!-- Secci贸n de contenido -->
         <div class="content">
-            <!-- Encabezado de la secci髇 de contenido -->
+            <!-- Encabezado de la secci贸n de contenido -->
             <div class="content-header">
                 <input type="button" value="Nuevo Proveedor">
                 <input type="text" placeholder="Buscar proveedor...">
@@ -157,7 +159,7 @@
 
             <!-- Tabla de proveedores -->
             <div class="table-container">
-                <!-- Filas de la tabla (simulaci髇) -->
+                <!-- Filas de la tabla (simulaci贸n) -->
                 <div class="table-row">
                     <div class="cell">Proveedor #001</div>
                     <div class="cell">Proveedor A</div>
@@ -176,7 +178,7 @@
                     <div class="cell">Activo</div>
                     <div class="cell"><a href="#">Ver Detalles</a></div>
                 </div>
-                <!-- M醩 filas -->
+                <!-- M谩s filas -->
             </div>
         </div>
     </div>

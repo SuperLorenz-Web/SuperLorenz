@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -189,11 +191,6 @@
                 <input type="text" placeholder="Buscar producto...">
                 <button class="search-button">&#128269;</button>
             </div>
-
-
-
-
-
             <nav>
                 <button class="nav-button" onclick="goToCart()">Carrito</button>
                 <button class="nav-button" onclick="goToEmpleado()">Empleado</button>
@@ -223,70 +220,70 @@
                 <div class="product-card">
                     <img src="imagenes/imagen1.png" alt="Producto 1" class="product-image">
                     <h3>Nombre Producto 1</h3>
-                    <p>Descripción breve del producto 1.</p>
+                    <p>DescripciÃ³n breve del producto 1.</p>
                     <span class="price">$ 1.988.030</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen2.png" alt="Producto 2" class="product-image">
                     <h3>Nombre Producto 2</h3>
-                    <p>Descripción breve del producto 2.</p>
+                    <p>DescripciÃ³n breve del producto 2.</p>
                     <span class="price">$ 2.099.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen3.png" alt="Producto 3" class="product-image">
                     <h3>Nombre Producto 3</h3>
-                    <p>Descripción breve del producto 3.</p>
+                    <p>DescripciÃ³n breve del producto 3.</p>
                     <span class="price">$ 1.750.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen4.png" alt="Producto 4" class="product-image">
                     <h3>Nombre Producto 4</h3>
-                    <p>Descripción breve del producto 4.</p>
+                    <p>DescripciÃ³n breve del producto 4.</p>
                     <span class="price">$ 1.600.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen5.png" alt="Producto 5" class="product-image">
                     <h3>Nombre Producto 5</h3>
-                    <p>Descripción breve del producto 5.</p>
+                    <p>DescripciÃ³n breve del producto 5.</p>
                     <span class="price">$ 1.550.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen6.png" alt="Producto 6" class="product-image">
                     <h3>Nombre Producto 6</h3>
-                    <p>Descripción breve del producto 6.</p>
+                    <p>DescripciÃ³n breve del producto 6.</p>
                     <span class="price">$ 1.499.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen7.png" alt="Producto 7" class="product-image">
                     <h3>Nombre Producto 7</h3>
-                    <p>Descripción breve del producto 7.</p>
+                    <p>DescripciÃ³n breve del producto 7.</p>
                     <span class="price">$ 1.250.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen8.png" alt="Producto 8" class="product-image">
                     <h3>Nombre Producto 8</h3>
-                    <p>Descripción breve del producto 8.</p>
+                    <p>DescripciÃ³n breve del producto 8.</p>
                     <span class="price">$ 1.200.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen9.png" alt="Producto 9" class="product-image">
                     <h3>Nombre Producto 9</h3>
-                    <p>Descripción breve del producto 9.</p>
+                    <p>DescripciÃ³n breve del producto 9.</p>
                     <span class="price">$ 1.100.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>
                 <div class="product-card">
                     <img src="imagenes/imagen10.png" alt="Producto 10" class="product-image">
                     <h3>Nombre Producto 10</h3>
-                    <p>Descripción breve del producto 10.</p>
+                    <p>DescripciÃ³n breve del producto 10.</p>
                     <span class="price">$ 1.050.000</span>
                     <button class="add-to-cart">Agregar</button>
                 </div>

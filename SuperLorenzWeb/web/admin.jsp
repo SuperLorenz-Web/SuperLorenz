@@ -60,6 +60,7 @@
 </head>
 <body>
     <div id="menu">
+        <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
         <h2>Menú Administrador</h2>
         <ul>
             <li><a href="admin-products.html">Ver Productos</a></li>
