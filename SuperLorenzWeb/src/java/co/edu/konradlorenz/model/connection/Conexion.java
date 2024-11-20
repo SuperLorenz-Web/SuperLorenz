@@ -3,10 +3,6 @@ package co.edu.konradlorenz.model.connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Conexion {
     // Configuración de la base de datos

@@ -1,4 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="co.edu.konradlorenz.model.*" %>
+<%@page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -215,78 +219,53 @@
                 <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
             </section>
 
+            <%
+                // Crear los objetos de DAO
+                ProductoDAO productoDAO = new ProductoDAO();
+                PrecioDAO precioDAO = new PrecioDAO();
+
+                // Obtener todos los productos
+                List<Producto> productos = productoDAO.getAllProductos();
+                request.setAttribute("productos", productos);
+                
+                System.out.println("Número de productos: " + productos.size());
+
+                // Obtener los precios para cada producto
+                for (Producto producto : productos) {
+                    // Obtener los precios correspondientes para cada producto
+                    List<Precio> precios = precioDAO.getPreciosByProductoID(producto.getProductoID());
+                    request.setAttribute("precios_" + producto.getProductoID(), precios); // Guardar precios en el request
+                }
+            %>
+
             <section class="product-grid">
-                <div class="product-card">
-                    <img src="imagenes/imagen1.png" alt="Producto 1" class="product-image">
-                    <h3>Nombre Producto 1</h3>
-                    <p>DescripciÃ³n breve del producto 1.</p>
-                    <span class="price">$ 1.988.030</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen2.png" alt="Producto 2" class="product-image">
-                    <h3>Nombre Producto 2</h3>
-                    <p>DescripciÃ³n breve del producto 2.</p>
-                    <span class="price">$ 2.099.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen3.png" alt="Producto 3" class="product-image">
-                    <h3>Nombre Producto 3</h3>
-                    <p>DescripciÃ³n breve del producto 3.</p>
-                    <span class="price">$ 1.750.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen4.png" alt="Producto 4" class="product-image">
-                    <h3>Nombre Producto 4</h3>
-                    <p>DescripciÃ³n breve del producto 4.</p>
-                    <span class="price">$ 1.600.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen5.png" alt="Producto 5" class="product-image">
-                    <h3>Nombre Producto 5</h3>
-                    <p>DescripciÃ³n breve del producto 5.</p>
-                    <span class="price">$ 1.550.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen6.png" alt="Producto 6" class="product-image">
-                    <h3>Nombre Producto 6</h3>
-                    <p>DescripciÃ³n breve del producto 6.</p>
-                    <span class="price">$ 1.499.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen7.png" alt="Producto 7" class="product-image">
-                    <h3>Nombre Producto 7</h3>
-                    <p>DescripciÃ³n breve del producto 7.</p>
-                    <span class="price">$ 1.250.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen8.png" alt="Producto 8" class="product-image">
-                    <h3>Nombre Producto 8</h3>
-                    <p>DescripciÃ³n breve del producto 8.</p>
-                    <span class="price">$ 1.200.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen9.png" alt="Producto 9" class="product-image">
-                    <h3>Nombre Producto 9</h3>
-                    <p>DescripciÃ³n breve del producto 9.</p>
-                    <span class="price">$ 1.100.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/imagen10.png" alt="Producto 10" class="product-image">
-                    <h3>Nombre Producto 10</h3>
-                    <p>DescripciÃ³n breve del producto 10.</p>
-                    <span class="price">$ 1.050.000</span>
-                    <button class="add-to-cart">Agregar</button>
-                </div>
+                <% 
+                    // Recuperamos la lista de productos del request
+                    productos = (List<Producto>) request.getAttribute("productos");
+                    
+                    // Depuración: verificar si la lista de productos está vacía
+                    if (productos == null || productos.isEmpty()) {
+                        out.println("No se encontraron productos.");
+                    }
+        
+                    // Iteramos sobre la lista de productos
+                    for (Producto producto : productos) {
+                        // Recuperar los precios correspondientes para este producto
+                        List<Precio> precios = (List<Precio>) request.getAttribute("precios_" + producto.getProductoID());
+                        Precio precioCorrespondiente = (precios != null && !precios.isEmpty()) ? precios.get(0) : null; // Tomamos el primer precio disponible
+                %>
+                    <div class="product-card">
+                        <img src="imagenes/imagen1.png" alt="<%= producto.getNombreProducto() %>" class="product-image">
+                        <h3><%= producto.getNombreProducto() %></h3>
+                        <p><%= producto.getDescripcionProducto() %></p>
+                        <span class="price">$ <%= precioCorrespondiente != null ? precioCorrespondiente.getPrecioUnitarioTotal() : 0.0 %></span>
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                <% 
+                    }
+                %>
             </section>
+
         </main>
 
         <script>

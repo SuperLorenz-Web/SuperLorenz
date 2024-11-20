@@ -14,19 +14,14 @@ public class PersonaDAO {
     // Método para validar las credenciales del usuario
     public boolean validarCredenciales(String correo, String passwordUsuario) {
         boolean credencialesValidas = false;
+        String query = "SELECT * FROM Persona p INNER JOIN Cliente c ON p.personaID = c.personaID WHERE p.correo = ? AND p.password = ?";
         try (Connection con = conexionBD.crearConexion()) {
-            if (con != null) {
-                String sql = "SELECT * \n" +
-"                    FROM Persona p\n" +
-"                    INNER JOIN Cliente c ON p.personaID = c.personaID\n" +
-"                    WHERE p.correo = ? AND p.password = ?";
-                try (PreparedStatement ps = con.prepareStatement(sql)) {
-                    ps.setString(1, correo);
-                    ps.setString(2, passwordUsuario);
+            try (PreparedStatement ps = con.prepareStatement(query)) {
+                ps.setString(1, correo);
+                ps.setString(2, passwordUsuario);
 
-                    try (ResultSet rs = ps.executeQuery()) {
-                        credencialesValidas = rs.next();
-                    }
+                try (ResultSet rs = ps.executeQuery()) {
+                    credencialesValidas = rs.next();
                 }
             }
         } catch (SQLException e) {
