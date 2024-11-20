@@ -12,13 +12,16 @@ public class PersonaDAO {
     private final Conexion conexionBD = new Conexion();
 
     // Método para validar las credenciales del usuario
-    public boolean validarCredenciales(String numeroDocumento, String passwordUsuario) {
+    public boolean validarCredenciales(String correo, String passwordUsuario) {
         boolean credencialesValidas = false;
         try (Connection con = conexionBD.crearConexion()) {
             if (con != null) {
-                String sql = "SELECT * FROM Persona WHERE numeroDocumento = ? AND password = ?";
+                String sql = "SELECT * \n" +
+"                    FROM Persona p\n" +
+"                    INNER JOIN Cliente c ON p.personaID = c.personaID\n" +
+"                    WHERE p.correo = ? AND p.password = ?";
                 try (PreparedStatement ps = con.prepareStatement(sql)) {
-                    ps.setString(1, numeroDocumento);
+                    ps.setString(1, correo);
                     ps.setString(2, passwordUsuario);
 
                     try (ResultSet rs = ps.executeQuery()) {
@@ -31,7 +34,7 @@ public class PersonaDAO {
         }
         return credencialesValidas;
     }
-
+/*
     // Método para obtener el tipo de usuario (Cliente, Proveedor, Empleado)
     public String obtenerTipoUsuario(String numeroDocumento) {
         String tipoUsuario = null;
@@ -84,4 +87,5 @@ public class PersonaDAO {
 
         return tipoUsuario;
     }
+    */
 }

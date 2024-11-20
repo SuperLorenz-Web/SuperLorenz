@@ -193,9 +193,15 @@
             </div>
             <nav>
                 <button class="nav-button" onclick="goToCart()">Carrito</button>
+<<<<<<< Updated upstream
                 <button class="nav-button" onclick="goToLoginEmpleado()">Soy Empleado</button>
                 <button class="nav-button" onclick="goToLoginProveedor()">Soy Proveedor</button>
                 <button class="nav-button" onclick="goToLoginCliente()">Ingresar</button>    
+=======
+                <button class="nav-button" onclick="goToEmpleado()">Empleado</button>
+                <button class="nav-button" onclick="goToProveedor()">Proveedor</button>
+                <button class="nav-button" onclick="goToLogin()">Cliente</button>    
+>>>>>>> Stashed changes
 
             </nav>
         </header>
@@ -303,14 +309,25 @@
                 const offset = -currentIndex * 100;
                 carouselContainer.style.transform = `translateX(${offset}%)`;
             }
+<<<<<<< Updated upstream
             function goToLoginProveedor() {
                 window.location.href = 'loginProveedor.jsp';
+=======
+
+            function goToProveedor() {
+                window.location.href = 'proveedor.jsp';
+>>>>>>> Stashed changes
             }
             function goToLoginCliente() {
                 window.location.href = 'loginCliente.jsp';
             }
+<<<<<<< Updated upstream
             function goToLoginEmpleado() {
                 window.location.href = 'loginEmpleado.jsp';
+=======
+            function goToEmpleado() {
+                window.location.href = 'loginempleadoadmin.jsp';
+>>>>>>> Stashed changes
             }
             function goToCart() {
                 window.location.href = 'carrito.jsp';
