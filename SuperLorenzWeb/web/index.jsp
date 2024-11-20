@@ -193,9 +193,9 @@
             </div>
             <nav>
                 <button class="nav-button" onclick="goToCart()">Carrito</button>
-                <button class="nav-button" onclick="goToEmpleado()">Empleado</button>
-                <button class="nav-button" onclick="goToProveedor()">Proveedor</button>
-                <button class="nav-button" onclick="goToLogin()">Ingresar</button>    
+                <button class="nav-button" onclick="goToLoginEmpleado()">Soy Empleado</button>
+                <button class="nav-button" onclick="goToLoginProveedor()">Soy Proveedor</button>
+                <button class="nav-button" onclick="goToLoginCliente()">Ingresar</button>    
 
             </nav>
         </header>
@@ -303,19 +303,17 @@
                 const offset = -currentIndex * 100;
                 carouselContainer.style.transform = `translateX(${offset}%)`;
             }
-
-            function goToProveedor() {
-                window.location.href = 'Proveedor.html';
+            function goToLoginProveedor() {
+                window.location.href = 'loginProveedor.jsp';
             }
-
-            function goToLogin() {
-                window.location.href = 'login.jsp';
+            function goToLoginCliente() {
+                window.location.href = 'loginCliente.jsp';
             }
-            function goToEmpleado() {
-                window.location.href = 'Empleado.html';
+            function goToLoginEmpleado() {
+                window.location.href = 'loginEmpleado.jsp';
             }
             function goToCart() {
-                window.location.href = 'Carrito_de_compras.html';
+                window.location.href = 'carrito.jsp';
             }
         </script>
     </body>
