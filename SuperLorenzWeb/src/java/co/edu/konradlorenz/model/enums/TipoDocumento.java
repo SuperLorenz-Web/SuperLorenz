@@ -1,5 +1,5 @@
 package co.edu.konradlorenz.model.enums;
 
 public enum TipoDocumento {
-    CC, RC, PEP, PPT, NIT
+    RC, CC, CE, PEP, PPT, PP, NIT
 }
