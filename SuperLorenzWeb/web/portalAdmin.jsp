@@ -1,78 +1,176 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@page import="co.edu.konradlorenz.model.*" %>
+<%@page import="co.edu.konradlorenz.model.dao.*" %>
+<%@page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Administrador</title>
+    <title>SuperLorenz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        body {
+            background-color: #ddd;
+        }
+
+        .header {
             display: flex;
-            height: 100vh;
-            background-color: #f4f4f4;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #a168a3;
+            padding: 15px 20px;
+            color: white;
         }
-        #menu {
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .header .user-info {
+            display: flex;
+            gap: 30px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
             width: 220px;
-            background-color: #6a1b9a; /* Morado oscuro */
-            color: #fff;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            height: 100%;
-            position: fixed;
+            background-color: #5e0063;
+            padding: 20px 0;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        #menu h2 {
-            margin-top: 0;
-            color: #fff;
-        }
-        #menu ul {
+
+        .sidebar ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
-        #menu ul li {
-            margin: 10px 0;
+
+        .sidebar ul li {
+            padding: 30px 0;
+            font-size: 18px;
+            cursor: pointer;
         }
-        #menu ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            display: block;
-            padding: 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+
+        .sidebar ul li:hover {
+            background-color: #8c4ea8;
         }
-        #menu ul li a:hover {
-            background-color: #8e24aa; /* Morado claro */
-        }
-        #content {
-            margin-left: 240px;
+
+        .content {
+            flex-grow: 1;
             padding: 20px;
-            width: calc(100% - 240px);
-            overflow-y: auto;
-            background-image: url(https://lists.office.com/Images/299a2881-1380-4020-b42f-715a35e1bcaf/5616957d-4af4-42cd-9328-9855b17805a5/T9LCYIWXXHO7DEXFJXW93GTRCN/aa364d76-7f78-40e2-a72f-17891fbce1b3);
         }
-        #content h1 {
-            margin-top: 0;
+
+        .content-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-header input[type="button"] {
+            background-color: #a168a3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-header input[type="text"] {
+            padding: 10px;
+            width: 200px;
+        }
+
+        .table-container {
+            background-color: #b48ebf;
+            padding: 10px;
+        }
+
+        .table-row {
+            background-color: #d8aad7;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div id="menu">
-        <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
-        <h2>Menú Administrador</h2>
-        <ul>
-            <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
-            <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
-            <li><a href="sell-products.html">Venta de Productos</a></li>
-            <li><a href="kardex.html">Kardex</a></li>
-            <li><a href="view-suppliers.html">Ver Proveedores</a></li>
-        </ul>
+
+    <div class="header">
+        <div class="logo">
+            <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
+            <h1>SuperLorenz</h1>
+        </div>
+        <div class="user-info">
+            <span>${usuario.nombres}</span>
+            <span><a href="loginempleadoadmin.jsp">Cerrar Sesión</a></span>
+        </div>
     </div>
-    <div id="content">
-        <h1>Bienvenido, Administrador</h1>
-        <p>Selecciona una opción del menú para ver más detalles.</p>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
+                <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
+                <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
+                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <input type="button" value="Nuevo ########">
+                <input type="text" placeholder="Buscar...">
+            </div>
+
+            <div class="table-container">
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+                <div class="table-row"></div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
+
+

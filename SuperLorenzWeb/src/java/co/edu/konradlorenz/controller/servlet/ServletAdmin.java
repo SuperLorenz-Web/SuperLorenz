@@ -13,8 +13,7 @@ import java.util.List;
 @WebServlet(name = "ServletAdmin", urlPatterns = {"/ServletAdmin"})
 public class ServletAdmin extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
-    // Instancia de AdminDAO
+    
     private AdminDAO adminDAO;
 
     public void init() {
@@ -38,9 +37,19 @@ public class ServletAdmin extends HttpServlet {
                 request.setAttribute("compras", compras);
                 request.getRequestDispatcher("botonCompraInsumos.jsp").forward(request, response);
                 break;
+            case "miCuenta":
+                Persona usuario = (Persona) request.getSession().getAttribute("usuario");
+                if (usuario != null) {
+                    request.setAttribute("usuario", usuario);
+                    request.getRequestDispatcher("botonMiCuenta.jsp").forward(request, response);
+                } else {
+                    response.sendRedirect("loginempleadoadmin.jsp");
+                }
+                break;
             default:
                 response.getWriter().append("Acción no válida");
                 break;
+                
         }
     }
 }

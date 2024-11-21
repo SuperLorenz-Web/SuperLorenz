@@ -43,9 +43,9 @@ public class PersonaDAO {
                         persona = new Persona();
                         persona.setPersonaID(rs.getInt("personaID"));
                         persona.setNombres(rs.getString("nombres"));
-                        persona.setApellidos(rs.getString("nombres"));
+                        persona.setApellidos(rs.getString("apellidos"));
                         persona.setNumeroDocumento(rs.getString("numeroDocumento"));
-                        String tipoDocumentoStr = rs.getString("tipoDocumento"); // Suponiendo que el valor en la base de datos es un String
+                        String tipoDocumentoStr = rs.getString("tipoDocumento"); 
                         persona.setTipoDocumento(TipoDocumento.valueOf(tipoDocumentoStr));
                         persona.setCelular(rs.getString("celular"));
                         persona.setCorreo(rs.getString("correo"));
@@ -59,57 +59,3 @@ public class PersonaDAO {
         return persona;
     }
 }
-/*
-    // Método para obtener el tipo de usuario (Cliente, Proveedor, Empleado)
-    public String obtenerTipoUsuario(String numeroDocumento) {
-        String tipoUsuario = null;
-
-        try (Connection con = conexionBD.crearConexion()) {
-            if (con != null) {
-                // Comprobar si el número de documento es de un cliente
-                String sqlCliente = "SELECT * FROM Cliente WHERE personaID = (SELECT personaID FROM Persona WHERE numeroDocumento = ?)";
-                try (PreparedStatement psCliente = con.prepareStatement(sqlCliente)) {
-                    psCliente.setString(1, numeroDocumento);
-
-                    try (ResultSet rsCliente = psCliente.executeQuery()) {
-                        if (rsCliente.next()) {
-                            tipoUsuario = "CLIENTE";
-                        }
-                    }
-                }
-
-                // Comprobar si el número de documento es de un proveedor
-                if (tipoUsuario == null) {
-                    String sqlProveedor = "SELECT * FROM Proveedor WHERE personaID = (SELECT personaID FROM Persona WHERE numeroDocumento = ?)";
-                    try (PreparedStatement psProveedor = con.prepareStatement(sqlProveedor)) {
-                        psProveedor.setString(1, numeroDocumento);
-
-                        try (ResultSet rsProveedor = psProveedor.executeQuery()) {
-                            if (rsProveedor.next()) {
-                                tipoUsuario = "PROVEEDOR";
-                            }
-                        }
-                    }
-                }
-
-                // Comprobar si el número de documento es de un empleado
-                if (tipoUsuario == null) {
-                    String sqlEmpleado = "SELECT * FROM Empleado WHERE personaID = (SELECT personaID FROM Persona WHERE numeroDocumento = ?)";
-                    try (PreparedStatement psEmpleado = con.prepareStatement(sqlEmpleado)) {
-                        psEmpleado.setString(1, numeroDocumento);
-
-                        try (ResultSet rsEmpleado = psEmpleado.executeQuery()) {
-                            if (rsEmpleado.next()) {
-                                tipoUsuario = "EMPLEADO";
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return tipoUsuario;
-    }
-    */
