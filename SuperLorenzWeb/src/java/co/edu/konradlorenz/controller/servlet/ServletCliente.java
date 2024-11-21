@@ -4,11 +4,13 @@ import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.dao.*;
 import co.edu.konradlorenz.model.enums.*;
 import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.io.*;
 import java.text.*;
 import java.util.*;
 
+@WebServlet(name = "ServletCliente", urlPatterns = {"/ServletCliente"})
 public class ServletCliente extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -108,15 +110,44 @@ public class ServletCliente extends HttpServlet {
             response.sendRedirect("login.jsp?msg=credenciales-invalidas");
         }
     }
-    //Cierra: loginClient
+    private void verClientes(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    
+    String action = request.getParameter("action");
+        if (action == null) {
+            action = ""; 
+        }
+
+        switch (action) {
+            case "verClientes":
+                ClienteDAO clienteDAO = new ClienteDAO();
+                List<Cliente> clientes = clienteDAO.getAllProveedores();  
+                request.setAttribute("clientes", clientes);
+                request.getRequestDispatcher("/botonClientes.jsp").forward(request, response);
+                break;
+            default:
+                response.getWriter().append("Acción no válida");
+                break;
+        }
+}
+    
+
     
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    String action = request.getParameter("action");
+
+    if ("verClientes".equals(action)) {
+        verClientes(request, response);  // Llamamos al método para mostrar clientes
+    } else {
         processRequest(request, response);
     }
+}
+
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -131,4 +162,3 @@ public class ServletCliente extends HttpServlet {
     // </editor-fold>
     
 }
-//class

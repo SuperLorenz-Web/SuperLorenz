@@ -45,6 +45,15 @@ public class ServletAdmin extends HttpServlet {
                 } else {
                     response.sendRedirect("loginempleadoadmin.jsp");
                 }
+            case "verPedidos":
+                List<Pedido> pedidos = adminDAO.obtenerPedidos();
+                request.setAttribute("pedidos", pedidos);
+                request.getRequestDispatcher("botonPedidos.jsp").forward(request, response);
+                break;
+            case "kardex":
+                List<Kardex> kardexList = adminDAO.obtenerKardex();
+                request.setAttribute("kardexList", kardexList);
+                request.getRequestDispatcher("botonKardex.jsp").forward(request, response);
                 break;
             default:
                 response.getWriter().append("Acción no válida");

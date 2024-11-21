@@ -3,14 +3,17 @@ package co.edu.konradlorenz.controller.servlet;
 import co.edu.konradlorenz.model.dao.EmpleadoDAO;
 import co.edu.konradlorenz.model.dao.PersonaDAO;
 import co.edu.konradlorenz.model.Persona;
+import co.edu.konradlorenz.model.Empleado;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet(name = "ServletEmpleado", urlPatterns = {"/ServletEmpleado"})
 public class ServletEmpleado extends HttpServlet {
@@ -38,9 +41,9 @@ public class ServletEmpleado extends HttpServlet {
                 // Redirigir según el tipo de usuario
                 String tipoUsuario = empleadoDAO.obtenerTipoUsuario(correo);
                 if ("EMPLEADO".equals(tipoUsuario)) {
-                    response.sendRedirect("portalEmpleado.jsp"); 
+                    response.sendRedirect("portalEmpleado.jsp");
                 } else if ("ADMIN".equals(tipoUsuario)) {
-                    response.sendRedirect("portalAdmin.jsp"); 
+                    response.sendRedirect("portalAdmin.jsp");
                 } else {
                     out.println("<h1>Tipo de usuario no reconocido.</h1>");
                 }
@@ -48,6 +51,21 @@ public class ServletEmpleado extends HttpServlet {
                 out.println("<h1>Error: Credenciales incorrectas</h1>");
                 out.println("<p>Por favor, intenta nuevamente.</p>");
             }
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String action = request.getParameter("action");
+
+        if ("verEmpleados".equals(action)) {
+            // Obtener la lista de empleados desde el DAO
+            List<Empleado> empleados = empleadoDAO.obtenerTodosEmpleados();
+            request.setAttribute("empleados", empleados);
+
+            // Redirigir a un JSP que muestre la lista de empleados
+            request.getRequestDispatcher("/botonEmpleados.jsp").forward(request, response);
         }
     }
 }

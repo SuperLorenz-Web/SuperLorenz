@@ -1,9 +1,13 @@
 package co.edu.konradlorenz.model.dao;
 
 import co.edu.konradlorenz.model.CompraInsumos;
+import co.edu.konradlorenz.model.Kardex;
+import co.edu.konradlorenz.model.Pedido;
 import co.edu.konradlorenz.model.Persona;
 import co.edu.konradlorenz.model.Producto;
 import co.edu.konradlorenz.model.enums.Estado;
+import co.edu.konradlorenz.model.enums.MedioPago;
+import co.edu.konradlorenz.model.enums.MotivoSalida;
 import co.edu.konradlorenz.model.enums.TipoDocumento;
 import java.sql.*;
 import java.util.ArrayList;
@@ -94,6 +98,61 @@ public class AdminDAO {
 
     return persona;
 }
+    public List<Pedido> obtenerPedidos() {
+    List<Pedido> pedidos = new ArrayList<>();
+    String query = "SELECT * FROM Pedido";
+
+    try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+         PreparedStatement ps = con.prepareStatement(query);
+         ResultSet rs = ps.executeQuery()) {
+
+        while (rs.next()) {
+            Pedido pedido = new Pedido();
+            pedido.setPedidoID(rs.getInt("pedidoID"));
+            pedido.setEmpleadoID(rs.getInt("empleadoID"));
+            pedido.setClienteID(rs.getInt("clienteID"));
+            pedido.setMedioPago(MedioPago.valueOf(rs.getString("medioPago")));
+            pedido.setFechaPago(rs.getDate("fechaPago"));
+            pedido.setFechaEnvio(rs.getDate("fechaEnvio"));
+            pedido.setFechaEntrega(rs.getDate("fechaEntrega"));
+            pedido.setValorTotal(rs.getFloat("valorTotal"));
+            
+            pedidos.add(pedido);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return pedidos;
+}
+    public List<Kardex> obtenerKardex() {
+        List<Kardex> kardexList = new ArrayList<>();
+        String sql = "SELECT * FROM Kardex";
+
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                Kardex kardex = new Kardex();
+                kardex.setKardexID(rs.getInt("kardexID"));
+                kardex.setProductoID(rs.getInt("productoID"));
+                kardex.setCantidadEntrada(rs.getInt("cantidadEntrada"));
+                kardex.setCantidadSalida(rs.getInt("cantidadSalida"));
+                kardex.setCantidadDisponible(rs.getInt("cantidadDisponible"));
+                kardex.setMotivosalida(MotivoSalida.valueOf(rs.getString("motivoSalida")));
+                kardex.setOtroMotivoSalida(rs.getString("otroMotivoSalida"));
+                kardex.setFecha(rs.getDate("fecha"));
+
+                kardexList.add(kardex);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace(); // Manejo básico de excepciones
+        }
+
+        return kardexList;
+    }
+
     
 
 }

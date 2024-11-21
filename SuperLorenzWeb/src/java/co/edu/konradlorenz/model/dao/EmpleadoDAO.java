@@ -1,13 +1,18 @@
 package co.edu.konradlorenz.model.dao;
 
+import co.edu.konradlorenz.model.Empleado;
 import co.edu.konradlorenz.model.connection.Conexion;
 import co.edu.konradlorenz.model.Persona;
+import co.edu.konradlorenz.model.enums.Dependencia;
+import co.edu.konradlorenz.model.enums.TipoContrato;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -76,6 +81,38 @@ public class EmpleadoDAO {
     }
     return tipoUsuario;
 }
+    public List<Empleado> obtenerTodosEmpleados() {
+        List<Empleado> empleados = new ArrayList<>();
+        String sql = "SELECT * FROM Empleado e JOIN Persona p ON e.personaID = p.personaID";
+
+        try (Connection con = conexionBD.crearConexion();
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                Empleado empleado = new Empleado();
+                empleado.setEmpleadoID(rs.getInt("empleadoID"));
+                empleado.setCargo(rs.getString("cargo"));
+                String dependenciastr = rs.getString("dependencia");
+                Dependencia dependencia = Dependencia.valueOf(dependenciastr); // Convierte el string a Enum
+                empleado.setDependencia(dependencia);
+                String tipoCstr = rs.getString("tipoContrato");
+                TipoContrato tipocontrato = TipoContrato.valueOf(tipoCstr); // Convierte el string a Enum
+                empleado.setTipoContrato(tipocontrato);
+                empleado.setEps(rs.getString("eps"));
+                empleado.setArl(rs.getString("arl"));
+                empleado.setNombreEmergencia(rs.getString("nombreEmergencia"));
+                empleado.setCelularEmergencia(rs.getString("celularEmergencia"));
+
+                // Agregar el empleado a la lista
+                empleados.add(empleado);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return empleados;
+    }
 
 }
 

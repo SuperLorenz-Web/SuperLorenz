@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Clientes</title>
+    <title>Ver Pedidos</title>
     <style>
         * {
             margin: 0;
@@ -21,9 +21,6 @@
 
         body {
             background-color: #ddd;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         .header {
@@ -53,19 +50,18 @@
 
         .container {
             display: flex;
-            flex-grow: 1;
         }
 
         .sidebar {
-            width: 220px; /* Ajuste del ancho */
+            width: 220px;
             background-color: #5e0063;
             padding: 20px 0;
             color: white;
             text-align: center;
-            height: 100vh; /* Ajuste de altura */
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Distribución de elementos */
+            justify-content: space-between;
         }
 
         .sidebar ul {
@@ -80,12 +76,6 @@
             cursor: pointer;
         }
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-
         .sidebar ul li:hover {
             background-color: #8c4ea8;
         }
@@ -95,9 +85,43 @@
             padding: 20px;
         }
 
+        .content-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-header input[type="button"] {
+            background-color: #a168a3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-header input[type="text"] {
+            padding: 10px;
+            width: 200px;
+        }
+
         .table-container {
             background-color: #b48ebf;
             padding: 10px;
+        }
+
+        .table-row {
+            background-color: #d8aad7;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         table {
@@ -105,22 +129,25 @@
             border-collapse: collapse;
         }
 
-        table, th, td {
-            border: 1px solid black;
-        }
-
         th, td {
             padding: 8px;
             text-align: left;
+            border: 1px solid #ddd;
         }
 
         th {
             background-color: #a168a3;
             color: white;
         }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
     </style>
 </head>
 <body>
+
     <div class="header">
         <div class="logo">
             <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
@@ -128,7 +155,7 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp" style="color: white;">Cerrar Sesión</a></span>
+            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
         </div>
     </div>
 
@@ -136,7 +163,6 @@
         <div class="sidebar">
             <ul>
                 <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <!-- Nueva opción "Ver Empleados" -->
                 <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
                 <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
                 <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
@@ -148,44 +174,47 @@
         </div>
 
         <div class="content">
+            <div class="content-header">
+                <h2>Lista de Pedidos</h2>
+            </div>
+
             <div class="table-container">
-                <h1>Lista de Clientes</h1>
                 <table>
                     <thead>
                         <tr>
-                            <th>Documento</th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Tipo de Cliente</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Fecha de Nacimiento</th>
-                            <th>Autorización de Datos</th>
+                            <th>ID Pedido</th>
+                            <th>Cliente ID</th>
+                            <th>Empleado ID</th>
+                            <th>Medio de Pago</th>
+                            <th>Fecha de Pago</th>
+                            <th>Fecha de Envío</th>
+                            <th>Fecha de Entrega</th>
+                            <th>Valor Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% 
-                            List<Cliente> clientes = (List<Cliente>) request.getAttribute("clientes");
-                            if (clientes != null && !clientes.isEmpty()) {
-                                for (Cliente cliente : clientes) {
+                            List<Pedido> pedidos = (List<Pedido>) request.getAttribute("pedidos");
+                            if (pedidos != null && !pedidos.isEmpty()) {
+                                for (Pedido pedido : pedidos) {
                         %>
-                                    <tr>
-                                        <td><%= cliente.getNumeroDocumento() %></td>
-                                        <td><%= cliente.getNombres() %></td>
-                                        <td><%= cliente.getApellidos() %></td>
-                                        <td><%= cliente.getTipoCliente() %></td>
-                                        <td><%= cliente.getCorreo() %></td>
-                                        <td><%= cliente.getDireccion() %></td>
-                                        <td><%= cliente.getFechaNacimiento() %></td>
-                                        <td><%= cliente.isAutorizacionDeDatos() %></td>
-                                    </tr>
+                            <tr>
+                                <td><%= pedido.getPedidoID() %></td>
+                                <td><%= pedido.getClienteID() %></td>
+                                <td><%= pedido.getEmpleadoID() %></td>
+                                <td><%= pedido.getMedioPago() %></td>
+                                <td><%= pedido.getFechaPago() %></td>
+                                <td><%= pedido.getFechaEnvio() %></td>
+                                <td><%= pedido.getFechaEntrega() %></td>
+                                <td><%= pedido.getValorTotal() %></td>
+                            </tr>
                         <% 
                                 }
                             } else {
                         %>
-                                <tr>
-                                    <td colspan="8" style="text-align: center;">No hay clientes registrados</td>
-                                </tr>
+                            <tr>
+                                <td colspan="8" style="text-align: center;">No hay pedidos registrados</td>
+                            </tr>
                         <% 
                             }
                         %>
@@ -194,5 +223,9 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
+
+
+

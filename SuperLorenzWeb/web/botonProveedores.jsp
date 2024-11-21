@@ -52,13 +52,19 @@
             gap: 30px;
         }
 
+        .container {
+            display: flex;
+            flex-grow: 1;
+            padding: 0; /* Elimina el padding entre el contenido y el menú */
+        }
+
         .sidebar {
             width: 220px;
             background-color: #5e0063;
             padding: 20px 0;
             color: white;
             text-align: center;
-            height: 100vh;
+            height: 100vh; /* La barra lateral ocupa toda la altura */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -79,25 +85,16 @@
         .sidebar ul li a {
             color: white;
             text-decoration: none;
+            display: block;
         }
 
         .sidebar ul li:hover {
             background-color: #8c4ea8;
         }
 
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            display: flex;
-            flex-grow: 1;
-            padding: 20px;
-            gap: 20px;
-        }
-
         .content {
             flex-grow: 1;
+            padding: 20px;
         }
 
         table {
@@ -140,7 +137,7 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginempleadoadmin.jsp" style="color: white;">Cerrar Sesión</a></span>
+            <span><a href="loginEmpleadoAdmin.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
 
@@ -148,8 +145,10 @@
         <div class="sidebar">
             <ul>
                 <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
+                <!-- Nueva opción agregada -->
+                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
                 <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
                 <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
@@ -198,4 +197,3 @@
 
 </body>
 </html>
-

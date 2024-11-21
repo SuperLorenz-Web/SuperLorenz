@@ -86,34 +86,13 @@
             padding: 20px;
         }
 
-        .content-header {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .content-header input[type="button"] {
-            background-color: #a168a3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .content-header input[type="text"] {
-            padding: 10px;
-            width: 200px;
-        }
-
-        .table-container {
+        .welcome-message {
             background-color: #b48ebf;
-            padding: 10px;
-        }
-
-        .table-row {
-            background-color: #d8aad7;
-            height: 40px;
-            margin-bottom: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
         }
 
         a {
@@ -135,7 +114,7 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginempleadoadmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
         </div>
     </div>
 
@@ -143,8 +122,10 @@
         <div class="sidebar">
             <ul>
                 <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
+                <!-- Nueva opción agregada debajo de "Mi Cuenta" -->
+                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
                 <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
                 <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
@@ -153,27 +134,16 @@
         </div>
 
         <div class="content">
-            <div class="content-header">
-                <input type="button" value="Nuevo ########">
-                <input type="text" placeholder="Buscar...">
+            <!-- Mensaje de bienvenida -->
+            <div class="welcome-message">
+                <h2>¡Bienvenido, ${usuario.nombres}!</h2>
+                <p>Este es el panel de administración de SuperLorenz. Aquí podrás gestionar todo el inventario, pedidos, proveedores y mucho más.</p>
+                <p>Selecciona una opción en el menú lateral para comenzar.</p>
             </div>
 
-            <div class="table-container">
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-                <div class="table-row"></div>
-            </div>
         </div>
     </div>
 
 </body>
 </html>
-
 

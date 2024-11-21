@@ -71,5 +71,6 @@ public class Cliente extends Persona {
         this.autorizacionDeDatos = autorizacionDeDatos;
     }
     
+    
 }
 //class

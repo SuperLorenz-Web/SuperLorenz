@@ -2,11 +2,16 @@ package co.edu.konradlorenz.model.dao;
 
 import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.connection.*;
+import co.edu.konradlorenz.model.enums.EstadoCivil;
+import co.edu.konradlorenz.model.enums.TipoCliente;
+import co.edu.konradlorenz.model.enums.TipoDocumento;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteDAO {
     
@@ -119,7 +124,41 @@ public class ClienteDAO {
             }
         return cliente;
     }
-    //Cierra: iniciarSesion
+    public static List<Cliente> getAllProveedores() {
+    List<Cliente> clientes = new ArrayList<>();
+    
+    try {
+        Conexion conexion = new Conexion();
+        connection = conexion.crearConexion();
+        
+        String query = "SELECT p.numeroDocumento, p.tipoDocumento, p.nombres, p.apellidos, "
+                     + "p.celular, p.correo, c.tipoCliente, c.direccion, c.fechaNacimiento, "
+                     + "c.estadoCivil, c.autorizacionDeDatos FROM Cliente c "
+                     + "INNER JOIN Persona p ON c.personaID = p.personaID";
+        personaStmt = (PreparedStatement)connection.prepareStatement(query);
+        personaStmt = connection.prepareStatement(query);
+        resultSet = personaStmt.executeQuery();
+        
+        while (resultSet.next()) {
+            Cliente cliente = new Cliente();
+            cliente.setNumeroDocumento(resultSet.getString("numeroDocumento"));
+            cliente.setTipoDocumento(TipoDocumento.valueOf(resultSet.getString("tipoDocumento")));
+            cliente.setNombres(resultSet.getString("nombres"));
+            cliente.setApellidos(resultSet.getString("apellidos"));
+            cliente.setCelular(resultSet.getString("celular"));
+            cliente.setCorreo(resultSet.getString("correo"));
+            cliente.setTipoCliente(TipoCliente.valueOf(resultSet.getString("tipoCliente")));
+            cliente.setDireccion(resultSet.getString("direccion"));
+            cliente.setFechaNacimiento(resultSet.getDate("fechaNacimiento"));
+            cliente.setAutorizacionDeDatos(resultSet.getBoolean("autorizacionDeDatos"));
+            
+            clientes.add(cliente);
+        }
+        
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }  
+    return clientes;
+}
     
 }
-//Cierra: class
