@@ -1,9 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="co.edu.konradlorenz.model.*" %>
+<%@ page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="co.edu.konradlorenz.model.enums.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.*" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - SuperLorenz</title>
+    <title>Inicio de SesiÃ³n - SuperLorenz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,11 +67,11 @@
 </head>
 <body>
     <form id="loginForm" name="loginForm" action="ServletEmpleado" method="POST">
-        <h1>Iniciar Sesión</h1>
+        <h1>Iniciar SesiÃ³n</h1>
         <label for="email">Correo:</label>
         <input type="text" id="email" name="email" placeholder="Ingrese su correo" required>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+        <label for="password">ContraseÃ±a:</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseÃ±a" required>
         <button type="submit">Ingresar</button>
     </form>
 </body>

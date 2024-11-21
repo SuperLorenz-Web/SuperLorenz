@@ -1,7 +1,9 @@
-<%@ page import="java.util.List" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="co.edu.konradlorenz.model.CompraInsumos" %>
-<%@ page import="co.edu.konradlorenz.model.enums.Estado" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="co.edu.konradlorenz.model.*" %>
+<%@ page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="co.edu.konradlorenz.model.enums.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -182,7 +184,7 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginempleadoadmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="loginempleadoadmin.jsp">Cerrar SesiÃ³n</a></span>
         </div>
     </div>
     <div class="container">
@@ -194,7 +196,7 @@
                 <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletAdmin?action=kardex">KÃ¡rdex</a></li>
             </ul>
         </div>
     

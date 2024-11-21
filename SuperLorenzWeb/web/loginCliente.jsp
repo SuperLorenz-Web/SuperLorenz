@@ -1,7 +1,14 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="co.edu.konradlorenz.model.*" %>
+<%@ page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="co.edu.konradlorenz.model.enums.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.*" %>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - SuperLorenz</title>
+    <title>Inicio de SesiÃ³n - SuperLorenz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -92,17 +99,17 @@
 </head>
 <body>
     <form id="loginForm" name="loginForm" action="ServletPersona" method="POST">
-        <h1>Iniciar Sesión</h1>
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="correo" name="email" placeholder="Ingrese su correo electrónico" required>
+        <h1>Iniciar SesiÃ³n</h1>
+        <label for="email">Correo ElectrÃ³nico:</label>
+        <input type="email" id="correo" name="email" placeholder="Ingrese su correo electrÃ³nico" required>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+        <label for="password">ContraseÃ±a:</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseÃ±a" required>
 
         <button type="submit">Ingresar</button>
         <div class="extra-options">
-            <p>¿Olvidaste tu contraseña? <a href="#">Recuperarla</a></p>
-            <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+            <p>Â¿Olvidaste tu contraseÃ±a? <a href="#">Recuperarla</a></p>
+            <p>Â¿No tienes cuenta? <a href="#">RegÃ­strate</a></p>
         </div>
     </form>
 </body>

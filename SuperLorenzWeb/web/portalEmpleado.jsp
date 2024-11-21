@@ -1,4 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="co.edu.konradlorenz.model.*" %>
+<%@ page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="co.edu.konradlorenz.model.enums.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="es">
