@@ -128,7 +128,7 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="Krello Logo 60x60.png" alt="Logo de SuperLorenz">
+            <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
             <span>SuperLorenz</span>
         </div>
         <div class="options">
