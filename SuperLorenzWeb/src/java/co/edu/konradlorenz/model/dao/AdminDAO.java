@@ -1,8 +1,10 @@
 package co.edu.konradlorenz.model.dao;
 
 import co.edu.konradlorenz.model.CompraInsumos;
+import co.edu.konradlorenz.model.Persona;
 import co.edu.konradlorenz.model.Producto;
 import co.edu.konradlorenz.model.enums.Estado;
+import co.edu.konradlorenz.model.enums.TipoDocumento;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +59,6 @@ public class AdminDAO {
                 compra.setFechaEntrega(rs.getDate("fechaEntrega"));
                 compra.setValorTotal(rs.getFloat("valorTotal"));
                 
-                // Agregar la compra a la lista
                 compras.add(compra);
             }
         } catch (SQLException e) {
@@ -66,4 +67,33 @@ public class AdminDAO {
 
         return compras;
     }
+    public Persona obtenerPersonaPorId(int personaID) {
+    Persona persona = null;
+    String query = "SELECT * FROM Persona WHERE personaID = ?";
+
+    try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+         PreparedStatement ps = con.prepareStatement(query)) {
+
+        ps.setInt(1, personaID);
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+            persona = new Persona();
+            persona.setPersonaID(rs.getInt("personaID"));
+            persona.setNumeroDocumento(rs.getString("numeroDocumento"));
+            persona.setTipoDocumento(TipoDocumento.valueOf(rs.getString("tipoDocumento")));
+            persona.setNombres(rs.getString("nombres"));
+            persona.setApellidos(rs.getString("apellidos"));
+            persona.setCelular(rs.getString("celular"));
+            persona.setCorreo(rs.getString("correo"));
+            persona.setPassword(rs.getString("password"));
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return persona;
+}
+    
+
 }
