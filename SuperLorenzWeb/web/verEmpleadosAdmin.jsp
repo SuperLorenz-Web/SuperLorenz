@@ -1,16 +1,13 @@
-<%@ page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="co.edu.konradlorenz.model.*" %>
-<%@ page import="co.edu.konradlorenz.model.dao.*" %>
-<%@ page import="co.edu.konradlorenz.model.enums.*" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.util.*" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="co.edu.konradlorenz.model.Empleado" %>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Kardex</title>
+    <title>Ver Empleados</title>
     <style>
         * {
             margin: 0;
@@ -110,21 +107,6 @@
             padding: 10px;
         }
 
-        .table-row {
-            background-color: #d8aad7;
-            height: 40px;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -145,6 +127,14 @@
             background-color: #f2f2f2;
         }
 
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -156,65 +146,63 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
 
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
-                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
-                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
+                <li><a href="ServletAdmin?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletAdmin?action=verEmpleados">Ver Empleados</a></li>
+                <li><a href="ServletAdmin?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletAdmin?action=verComprasInsumos">Ver Compras Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletAdmin?action=verKardex">Ver Kárdex</a></li>
             </ul>
         </div>
 
         <div class="content">
             <div class="content-header">
-                <h2>Lista de Kardex</h2>
+                <h2>Lista de Empleados</h2>
             </div>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>ID Kardex</th>
-                            <th>ID Producto</th>
-                            <th>Cantidad Entrada</th>
-                            <th>Cantidad Salida</th>
-                            <th>Cantidad Disponible</th>
-                            <th>Motivo de Salida</th>
-                            <th>Otro Motivo de Salida</th>
-                            <th>Fecha</th>
+                            <th>ID Empleado</th>
+                            <th>Cargo</th>
+                            <th>Dependencia</th>
+                            <th>Tipo de Contrato</th>
+                            <th>EPS</th>
+                            <th>ARL</th>
+                            <th>Contacto de Emergencia</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% 
-                            List<Kardex> kardexList = (List<Kardex>) request.getAttribute("kardexList");
-                            if (kardexList != null && !kardexList.isEmpty()) {
-                                for (Kardex kardex : kardexList) {
+                            List<Empleado> empleados = (List<Empleado>) request.getAttribute("empleados");
+                            if (empleados != null && !empleados.isEmpty()) {
+                                for (Empleado empleado : empleados) {
                         %>
                             <tr>
-                                <td><%= kardex.getKardexID() %></td>
-                                <td><%= kardex.getProductoID() %></td>
-                                <td><%= kardex.getCantidadEntrada() %></td>
-                                <td><%= kardex.getCantidadSalida() %></td>
-                                <td><%= kardex.getCantidadDisponible() %></td>
-                                <td><%= kardex.getMotivosalida() != null ? kardex.getMotivosalida().toString() : "" %></td>
-                                <td><%= kardex.getOtroMotivoSalida() != null ? kardex.getOtroMotivoSalida() : "" %></td>
-                                <td><%= kardex.getFecha() != null ? kardex.getFecha() : "" %></td>
+                                <td><%= empleado.getEmpleadoID() %></td>
+                                <td><%= empleado.getCargo() %></td>
+                                <td><%= empleado.getDependencia() %></td>
+                                <td><%= empleado.getTipoContrato() %></td>
+                                <td><%= empleado.getEps() %></td>
+                                <td><%= empleado.getArl() %></td>
+                                <td><%= empleado.getNombreEmergencia() + " - " + empleado.getCelularEmergencia() %></td>
                             </tr>
                         <% 
                                 }
                             } else {
                         %>
                             <tr>
-                                <td colspan="8" style="text-align: center;">No hay registros de Kardex</td>
+                                <td colspan="7" style="text-align: center;">No hay empleados registrados</td>
                             </tr>
                         <% 
                             }
@@ -227,3 +215,4 @@
 
 </body>
 </html>
+

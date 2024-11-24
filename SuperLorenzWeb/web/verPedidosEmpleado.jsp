@@ -4,13 +4,12 @@
 <%@ page import="co.edu.konradlorenz.model.enums.*" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.util.*" %>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos Registrados</title>
+    <title>Ver Pedidos</title>
     <style>
         * {
             margin: 0;
@@ -54,7 +53,7 @@
         }
 
         .sidebar {
-            width: 255px;
+            width: 220px;
             background-color: #5e0063;
             padding: 20px 0;
             color: white;
@@ -125,44 +124,30 @@
             text-decoration: underline;
         }
 
-        #content {
-            margin-left: 240px;
-            padding: 20px;
-            width: calc(100% - 240px);
-            overflow-y: auto;
-        }
-
-        #content h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
         table {
-            width: 80%;
-            margin: 0 auto;
+            width: 100%;
             border-collapse: collapse;
         }
 
-        table, th, td {
+        th, td {
+            padding: 8px;
+            text-align: left;
             border: 1px solid #ddd;
         }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
         th {
-            background-color: #6a1b9a;
-            color: #fff;
+            background-color: #a168a3;
+            color: white;
         }
 
         tr:nth-child(even) {
-            background-color: #f4f4f4;
+            background-color: #f2f2f2;
         }
+
     </style>
 </head>
 <body>
+
     <div class="header">
         <div class="logo">
             <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
@@ -170,60 +155,76 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
+
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
-                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
-                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
-                <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
-                <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletEmpleado?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletEmpleado?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletEmpleado?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletEmpleado?action=verComprasInsumos">Ver Compras Insumos</a></li>
+                <li><a href="ServletEmpleado?action=verProductos">Ver Productos</a></li>
+                <li><a href="ServletEmpleado?action=verPedidos">Ver Pedidos</a></li>
+                <li><a href="ServletEmpleado?action=verKardex">Ver Kárdex</a></li>
             </ul>
         </div>
-        <div id="content">
-            <h1>Lista de Productos</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Categoría</th>
-                        <th>Marca</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%
-                        List<Producto> productos = (List<Producto>) request.getAttribute("productos");
-                        if (productos != null && !productos.isEmpty()) {
-                            for (Producto producto : productos) {
-                    %>
-                                <tr>
-                                    <td><%= producto.getProductoID() %></td>
-                                    <td><%= producto.getNombreProducto() %></td>
-                                    <td><%= producto.getDescripcionProducto() %></td>
-                                    <td><%= producto.getCategoria() %></td>
-                                    <td><%= producto.getMarca() %></td>
-                                </tr>
-                    <%
-                            }
-                        } else {
-                    %>
+
+        <div class="content">
+            <div class="content-header">
+                <h2>Lista de Pedidos</h2>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Cliente ID</th>
+                            <th>Empleado ID</th>
+                            <th>Medio de Pago</th>
+                            <th>Fecha de Pago</th>
+                            <th>Fecha de Envío</th>
+                            <th>Fecha de Entrega</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% 
+                            List<Pedido> pedidos = (List<Pedido>) request.getAttribute("pedidos");
+                            if (pedidos != null && !pedidos.isEmpty()) {
+                                for (Pedido pedido : pedidos) {
+                        %>
                             <tr>
-                                <td colspan="5" style="text-align: center;">No hay productos registrados</td>
+                                <td><%= pedido.getPedidoID() %></td>
+                                <td><%= pedido.getClienteID() %></td>
+                                <td><%= pedido.getEmpleadoID() %></td>
+                                <td><%= pedido.getMedioPago() %></td>
+                                <td><%= pedido.getFechaPago() %></td>
+                                <td><%= pedido.getFechaEnvio() %></td>
+                                <td><%= pedido.getFechaEntrega() %></td>
+                                <td><%= pedido.getValorTotal() %></td>
                             </tr>
-                    <%
-                        }
-                    %>
-                </tbody>
-            </table>
+                        <% 
+                                }
+                            } else {
+                        %>
+                            <tr>
+                                <td colspan="8" style="text-align: center;">No hay pedidos registrados</td>
+                            </tr>
+                        <% 
+                            }
+                        %>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
+
+
+

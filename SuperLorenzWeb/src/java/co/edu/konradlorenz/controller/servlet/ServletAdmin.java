@@ -11,7 +11,7 @@ import static java.lang.System.out;
 import java.text.*;
 import java.util.*;
 
-@WebServlet(name = "ServletEmpleado", urlPatterns = {"/ServletEmpleado"})
+@WebServlet(name = "ServletAdmin", urlPatterns = {"/ServletAdmin"})
 public class ServletAdmin extends HttpServlet {
     
     // Abre: processRequest
@@ -28,8 +28,15 @@ public class ServletAdmin extends HttpServlet {
         }
         
         switch (action) {
+            case "register":
+                register(request, response);
+                break;
+            case "login":
+                login(request, response);
+                break;
             case "verMiCuenta":
                 verMiCuenta(request, response);
+                break;
             case "verEmpleados":
                 verEmpleados(request, response);
                 break;
@@ -58,6 +65,114 @@ public class ServletAdmin extends HttpServlet {
         
     }
     // Cierra: processRequest
+        
+    
+    
+    
+    
+    //Abre: register
+    private void register(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        
+        try{
+            
+            Empleado nuevoEmpleado = new Empleado();
+            
+            
+            
+            //Persona:
+            String numeroDocumento = request.getParameter("numeroDocumento");
+            TipoDocumento tipoDocumento = TipoDocumento.valueOf(request.getParameter("tipoDocumento")); // Enum conversion
+            String nombres = request.getParameter("nombres");
+            String apellidos = request.getParameter("apellidos");
+            String celular = request.getParameter("celular");
+            String correo = request.getParameter("correo");
+            String password = request.getParameter("password");
+            
+            nuevoEmpleado.setNumeroDocumento(numeroDocumento);
+            nuevoEmpleado.setTipoDocumento(tipoDocumento);
+            nuevoEmpleado.setNombres(nombres);
+            nuevoEmpleado.setApellidos(apellidos);
+            nuevoEmpleado.setCelular(celular);
+            nuevoEmpleado.setCorreo(correo);
+            nuevoEmpleado.setPassword(password);
+            
+            
+            
+            //Empleado:
+            Cargo cargo = Cargo.valueOf(request.getParameter("cargo")); // Enum conversion
+            Dependencia dependencia = Dependencia.valueOf(request.getParameter("dependencia")); // Enum conversion
+            TipoContrato tipoContrato = TipoContrato.valueOf(request.getParameter("tipoContrato")); // Enum conversion
+            String eps = request.getParameter("eps");
+            String arl = request.getParameter("arl");
+            String nombreEmergencia = request.getParameter("nombreEmergencia");
+            String celularEmergencia = request.getParameter("celularEmergencia");
+
+            nuevoEmpleado.setCargo(cargo);
+            nuevoEmpleado.setDependencia(dependencia);
+            nuevoEmpleado.setTipoContrato(tipoContrato);
+            nuevoEmpleado.setEps(eps);
+            nuevoEmpleado.setArl(arl);
+            nuevoEmpleado.setNombreEmergencia(nombreEmergencia);
+            nuevoEmpleado.setCelularEmergencia(celularEmergencia);
+
+            int status = EmpleadoDAO.agregar(nuevoEmpleado);
+        
+            if (status > 0){
+                response.sendRedirect("mensaje.jsp?msg=registro-exitoso");
+            } else {
+                response.sendRedirect("error.jsp?msg=registro-fallido");
+            }
+            //if
+            
+        } catch (Exception e) {
+            System.out.println("ERROR AL REGISTRAR EL EMPLEADO...");
+            e.printStackTrace();
+        }
+        
+    }
+    //Cierra: register
+    
+    
+    
+    
+    
+    //Abre: login
+    private void login(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        
+        String correo = request.getParameter("correo");
+        String password = request.getParameter("password");
+
+        Empleado empleado = EmpleadoDAO.iniciarSesion(correo, password);
+
+        if (empleado != null) {
+            
+            // Guardar el nombre del usuario en la sesión
+            request.getSession().setAttribute("nombres", empleado.getNombres());
+            
+            Set<String> rolesAdmin = new HashSet<>(Arrays.asList("GERENTE_GENERAL", "SUBGERENTE", "JEFE_DE_RECURSOS_HUMANOS"));
+            String cargoEmpleado = empleado.getCargo().name();
+            
+            // Depuración
+            System.out.println("Cargo del empleado recuperado: " + cargoEmpleado);
+            
+            // Verificar si el empleado tiene rol de admin
+            if (rolesAdmin.contains(cargoEmpleado)) {
+                response.sendRedirect("portalAdmin.jsp");
+            } else {
+                response.sendRedirect("portalEmpleado.jsp");
+            }
+            
+        } else {
+            response.setContentType("text/html;charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
+                out.println("<h1>Error: Credenciales incorrectas</h1>");
+                out.println("<p>Por favor, intenta nuevamente.</p>");
+            }
+        }
+    }
+    // Cierra: login
     
     
     
@@ -70,7 +185,7 @@ public class ServletAdmin extends HttpServlet {
         
         if (empleado != null) {
             request.setAttribute("empleado", empleado);
-            request.getRequestDispatcher("/botonMiCuenta.jsp").forward(request, response);
+            request.getRequestDispatcher("/verMiCuentaAdmin.jsp").forward(request, response);
         } else {
             response.sendRedirect("loginEmpleadoAdmin.jsp");
         }
@@ -88,7 +203,7 @@ public class ServletAdmin extends HttpServlet {
         
         List<Empleado> empleados = EmpleadoDAO.obtenerTodos();
         request.setAttribute("empleados", empleados);
-        request.getRequestDispatcher("/botonEmpleados.jsp").forward(request, response);
+        request.getRequestDispatcher("/verEmpleadosAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verEmpleados
@@ -103,7 +218,7 @@ public class ServletAdmin extends HttpServlet {
         
         List<Proveedor> proveedores = ProveedorDAO.obtenerTodos();
         request.setAttribute("proveedores", proveedores);
-        request.getRequestDispatcher("/botonProveedores.jsp").forward(request, response);
+        request.getRequestDispatcher("/verProveedoresAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verProveedores
@@ -118,7 +233,7 @@ public class ServletAdmin extends HttpServlet {
         
         List<Cliente> clientes = ClienteDAO.obtenerTodos();
         request.setAttribute("clientes", clientes);
-        request.getRequestDispatcher("botonClientes.jsp").forward(request, response);
+        request.getRequestDispatcher("verClientesAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verClientes
@@ -133,7 +248,7 @@ public class ServletAdmin extends HttpServlet {
         
         List<CompraInsumos> comprasInsumos = CompraInsumosDAO.obtenerTodos();
         request.setAttribute("comprasInsumos", comprasInsumos);
-        request.getRequestDispatcher("botonCompraInsumos.jsp").forward(request, response);
+        request.getRequestDispatcher("verCompraInsumosAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verComprasInsumos
@@ -150,7 +265,7 @@ public class ServletAdmin extends HttpServlet {
         List<Precio> precios = PrecioDAO.obtenerTodos();
         request.setAttribute("productos", productos);
         request.setAttribute("precios", precios);
-        request.getRequestDispatcher("botonProductos.jsp").forward(request, response);
+        request.getRequestDispatcher("verProductosAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verProductos
@@ -167,7 +282,7 @@ public class ServletAdmin extends HttpServlet {
         List<ProductoPedido> productoPedido = ProductoPedidoDAO.obtenerTodos();// Se puede cambiar por uno que solo traiga la cantidad.
         request.setAttribute("pedidos", pedidos);
         request.setAttribute("productoPedido", productoPedido);
-        request.getRequestDispatcher("botonPedidos.jsp").forward(request, response);
+        request.getRequestDispatcher("verPedidosAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verPedidos
@@ -182,7 +297,7 @@ public class ServletAdmin extends HttpServlet {
         
         List<Kardex> listaKardex = KardexDAO.obtenerTodos();
         request.setAttribute("listaKardex", listaKardex);
-        request.getRequestDispatcher("botonKardex.jsp").forward(request, response);
+        request.getRequestDispatcher("verKardexAdmin.jsp").forward(request, response);
         
     }
     // Cierra: verKardex

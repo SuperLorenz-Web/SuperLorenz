@@ -36,8 +36,6 @@ public class ServletEmpleado extends HttpServlet {
                 break;
             case "verMiCuenta":
                 verMiCuenta(request, response);
-            case "verEmpleados":
-                verEmpleados(request, response);
                 break;
             case "verProveedores":
                 verProveedores(request, response);
@@ -184,7 +182,7 @@ public class ServletEmpleado extends HttpServlet {
         
         if (empleado != null) {
             request.setAttribute("empleado", empleado);
-            request.getRequestDispatcher("/botonMiCuenta.jsp").forward(request, response);
+            request.getRequestDispatcher("/verMiCuentaEmpleado.jsp").forward(request, response);
         } else {
             response.sendRedirect("loginEmpleadoAdmin.jsp");
         }
@@ -196,28 +194,13 @@ public class ServletEmpleado extends HttpServlet {
     
     
     
-    // Abre: verEmpleados
-    private static void verEmpleados(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        
-        List<Empleado> empleados = EmpleadoDAO.obtenerTodos();
-        request.setAttribute("empleados", empleados);
-        request.getRequestDispatcher("/botonEmpleados.jsp").forward(request, response);
-        
-    }
-    // Cierra: verEmpleados
-    
-    
-    
-    
-    
     // Abre: verProveedores
     private static void verProveedores(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         
         List<Proveedor> proveedores = ProveedorDAO.obtenerTodos();
         request.setAttribute("proveedores", proveedores);
-        request.getRequestDispatcher("/botonProveedores.jsp").forward(request, response);
+        request.getRequestDispatcher("/verProveedoresEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verProveedores
@@ -232,7 +215,7 @@ public class ServletEmpleado extends HttpServlet {
         
         List<Cliente> clientes = ClienteDAO.obtenerTodos();
         request.setAttribute("clientes", clientes);
-        request.getRequestDispatcher("botonClientes.jsp").forward(request, response);
+        request.getRequestDispatcher("verClientesEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verClientes
@@ -247,7 +230,7 @@ public class ServletEmpleado extends HttpServlet {
         
         List<CompraInsumos> comprasInsumos = CompraInsumosDAO.obtenerTodos();
         request.setAttribute("comprasInsumos", comprasInsumos);
-        request.getRequestDispatcher("botonCompraInsumos.jsp").forward(request, response);
+        request.getRequestDispatcher("verCompraInsumosEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verComprasInsumos
@@ -264,7 +247,7 @@ public class ServletEmpleado extends HttpServlet {
         List<Precio> precios = PrecioDAO.obtenerTodos();
         request.setAttribute("productos", productos);
         request.setAttribute("precios", precios);
-        request.getRequestDispatcher("botonProductos.jsp").forward(request, response);
+        request.getRequestDispatcher("verProductosEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verProductos
@@ -281,7 +264,7 @@ public class ServletEmpleado extends HttpServlet {
         List<ProductoPedido> productoPedido = ProductoPedidoDAO.obtenerTodos();// Se puede cambiar por uno que solo traiga la cantidad.
         request.setAttribute("pedidos", pedidos);
         request.setAttribute("productoPedido", productoPedido);
-        request.getRequestDispatcher("botonPedidos.jsp").forward(request, response);
+        request.getRequestDispatcher("verPedidosEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verPedidos
@@ -296,7 +279,7 @@ public class ServletEmpleado extends HttpServlet {
         
         List<Kardex> listaKardex = KardexDAO.obtenerTodos();
         request.setAttribute("listaKardex", listaKardex);
-        request.getRequestDispatcher("botonKardex.jsp").forward(request, response);
+        request.getRequestDispatcher("verKardexEmpleado.jsp").forward(request, response);
         
     }
     // Cierra: verKardex

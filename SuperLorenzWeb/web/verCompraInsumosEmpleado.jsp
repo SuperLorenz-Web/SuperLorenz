@@ -184,21 +184,19 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <!-- Nueva opción añadida aquí -->
-                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
-                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
-                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
-                <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
-                <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletEmpleado?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletEmpleado?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletEmpleado?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletEmpleado?action=verComprasInsumos">Ver Compras Insumos</a></li>
+                <li><a href="ServletEmpleado?action=verProductos">Ver Productos</a></li>
+                <li><a href="ServletEmpleado?action=verPedidos">Ver Pedidos</a></li>
+                <li><a href="ServletEmpleado?action=verKardex">Ver Kárdex</a></li>
             </ul>
         </div>
     

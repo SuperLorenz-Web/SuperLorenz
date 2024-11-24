@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperLorenz - Empleado</title>
+    <title>Ver Proveedores</title>
     <style>
         * {
             margin: 0;
@@ -22,6 +22,9 @@
 
         body {
             background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .header {
@@ -51,6 +54,8 @@
 
         .container {
             display: flex;
+            flex-grow: 1;
+            padding: 0; /* Elimina el padding entre el contenido y el menú */
         }
 
         .sidebar {
@@ -59,7 +64,7 @@
             padding: 20px 0;
             color: white;
             text-align: center;
-            height: 100vh;
+            height: 100vh; /* La barra lateral ocupa toda la altura */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -77,6 +82,12 @@
             cursor: pointer;
         }
 
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
         .sidebar ul li:hover {
             background-color: #8c4ea8;
         }
@@ -86,22 +97,34 @@
             padding: 20px;
         }
 
-        .welcome-message {
-            background-color: #b48ebf;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 20px;
-            color: #333;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        a {
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #a168a3;
             color: white;
-            text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .table-container {
+            background-color: #b48ebf;
+            padding: 10px;
+        }
+
+        .table-row {
+            background-color: #d8aad7;
+            height: 40px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -114,13 +137,11 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="index.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
 
-    <!-- Contenedor principal -->
     <div class="container">
-        <!-- Barra lateral -->
         <div class="sidebar">
             <ul>
                 <li><a href="ServletEmpleado?action=verMiCuenta">Mi Cuenta</a></li>
@@ -129,19 +150,46 @@
                 <li><a href="ServletEmpleado?action=verComprasInsumos">Ver Compras Insumos</a></li>
                 <li><a href="ServletEmpleado?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletEmpleado?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletEmpleado?action=verKardex">Kárdex</a></li>
+                <li><a href="ServletEmpleado?action=verKardex">Ver Kárdex</a></li>
             </ul>
         </div>
 
         <div class="content">
-            <!-- Mensaje de bienvenida -->
-            <div class="welcome-message">
-                <h2>¡Bienvenido, ${usuario.nombres}!</h2>
-                <p>Este es el panel de empleado de SuperLorenz. Aquí podrás gestionar las tablas.</p>
-                <p>Selecciona una opción en el menú lateral para comenzar.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Proveedor</th>
+                            <th>Tipo Proveedor</th>
+                            <th>Nombre Contacto</th>
+                            <th>Número Contacto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% 
+                            List<Proveedor> proveedores = (List<Proveedor>) request.getAttribute("proveedores");
+                            if (proveedores != null && !proveedores.isEmpty()) {
+                                for (Proveedor proveedor : proveedores) {
+                        %>
+                                    <tr>
+                                        <td><%= proveedor.getProveedorID() %></td>
+                                        <td><%= proveedor.getTipoProveedor() %></td>
+                                        <td><%= proveedor.getNombreContacto() %></td>
+                                        <td><%= proveedor.getNumeroContacto() %></td>
+                                    </tr>
+                        <% 
+                                }
+                            } else {
+                        %>
+                                <tr>
+                                    <td colspan="4" style="text-align: center;">No hay proveedores registrados</td>
+                                </tr>
+                        <% 
+                            }
+                        %>
+                    </tbody>
+                </table>
             </div>
-
-        </div>
         </div>
     </div>
 

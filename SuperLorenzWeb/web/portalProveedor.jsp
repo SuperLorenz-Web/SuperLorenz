@@ -114,7 +114,7 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp">Cerrar Sesión</a></span>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
         <div class="sidebar">
             <ul>
                 <li><a href="ServletProveedor?action=verMiCuenta">Mi Cuenta</a></li>
-                <li><a href="ServletProveedor?action=verComprarInsumos">Ver Compra de Insumos</a></li>
+                <li><a href="ServletProveedor?action=verComprasInsumos">Ver Compras Insumos</a></li>
                 <li><a href="ServletProveedor?action=verProductos">Ver Productos</a></li>
             </ul>
         </div>

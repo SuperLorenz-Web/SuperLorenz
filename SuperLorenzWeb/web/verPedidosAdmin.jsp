@@ -1,13 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.List" %>
-<%@ page import="co.edu.konradlorenz.model.Empleado" %>
-
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="co.edu.konradlorenz.model.*" %>
+<%@ page import="co.edu.konradlorenz.model.dao.*" %>
+<%@ page import="co.edu.konradlorenz.model.enums.*" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Empleados</title>
+    <title>Ver Pedidos</title>
     <style>
         * {
             margin: 0;
@@ -107,6 +109,21 @@
             padding: 10px;
         }
 
+        .table-row {
+            background-color: #d8aad7;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -127,14 +144,6 @@
             background-color: #f2f2f2;
         }
 
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -146,63 +155,65 @@
         </div>
         <div class="user-info">
             <span>${usuario.nombres}</span>
-            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
+            <span><a href="index.jsp" style="color: white;">Cerrar Sesión</a></span>
         </div>
     </div>
 
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
-                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
-                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
+                <li><a href="ServletAdmin?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletAdmin?action=verEmpleados">Ver Empleados</a></li>
+                <li><a href="ServletAdmin?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletAdmin?action=verComprasInsumos">Ver Compras Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletAdmin?action=verKardex">Ver Kárdex</a></li>
             </ul>
         </div>
 
         <div class="content">
             <div class="content-header">
-                <h2>Lista de Empleados</h2>
+                <h2>Lista de Pedidos</h2>
             </div>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>ID Empleado</th>
-                            <th>Cargo</th>
-                            <th>Dependencia</th>
-                            <th>Tipo de Contrato</th>
-                            <th>EPS</th>
-                            <th>ARL</th>
-                            <th>Contacto de Emergencia</th>
+                            <th>ID Pedido</th>
+                            <th>Cliente ID</th>
+                            <th>Empleado ID</th>
+                            <th>Medio de Pago</th>
+                            <th>Fecha de Pago</th>
+                            <th>Fecha de Envío</th>
+                            <th>Fecha de Entrega</th>
+                            <th>Valor Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% 
-                            List<Empleado> empleados = (List<Empleado>) request.getAttribute("empleados");
-                            if (empleados != null && !empleados.isEmpty()) {
-                                for (Empleado empleado : empleados) {
+                            List<Pedido> pedidos = (List<Pedido>) request.getAttribute("pedidos");
+                            if (pedidos != null && !pedidos.isEmpty()) {
+                                for (Pedido pedido : pedidos) {
                         %>
                             <tr>
-                                <td><%= empleado.getEmpleadoID() %></td>
-                                <td><%= empleado.getCargo() %></td>
-                                <td><%= empleado.getDependencia() %></td>
-                                <td><%= empleado.getTipoContrato() %></td>
-                                <td><%= empleado.getEps() %></td>
-                                <td><%= empleado.getArl() %></td>
-                                <td><%= empleado.getNombreEmergencia() + " - " + empleado.getCelularEmergencia() %></td>
+                                <td><%= pedido.getPedidoID() %></td>
+                                <td><%= pedido.getClienteID() %></td>
+                                <td><%= pedido.getEmpleadoID() %></td>
+                                <td><%= pedido.getMedioPago() %></td>
+                                <td><%= pedido.getFechaPago() %></td>
+                                <td><%= pedido.getFechaEnvio() %></td>
+                                <td><%= pedido.getFechaEntrega() %></td>
+                                <td><%= pedido.getValorTotal() %></td>
                             </tr>
                         <% 
                                 }
                             } else {
                         %>
                             <tr>
-                                <td colspan="7" style="text-align: center;">No hay empleados registrados</td>
+                                <td colspan="8" style="text-align: center;">No hay pedidos registrados</td>
                             </tr>
                         <% 
                             }
@@ -215,4 +226,6 @@
 
 </body>
 </html>
+
+
 
