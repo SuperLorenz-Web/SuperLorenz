@@ -35,7 +35,7 @@
                 background: rgba(255, 255, 255, 0.1);
                 border-radius: 15px;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                padding: 20px;
+                padding: 70px;
                 max-width: 400px;
                 width: 100%;
             }
@@ -46,7 +46,7 @@
                 margin-bottom: 5px;
             }
 
-            input[type="text"], input[type="password"] {
+            input[type="email"], input[type="password"] {
                 width: 100%;
                 padding: 10px;
                 margin-bottom: 15px;
@@ -100,19 +100,30 @@
         </style>
     </head>
     <body>
-        <form id="loginForm" name="loginForm" action="ServletPersona" method="POST">
+        <form id="loginForm" name="loginForm" action="ServletProveedor" method="POST">
+            
             <h1>Iniciar Sesión</h1>
-            <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cédula" required>
+        
+            <!-- Campo oculto para enviar la acción -->
+            <input type="hidden" name="action" value="login">
 
+            <!-- Campo de correo -->
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+
+            <!-- Campo de contraseña -->
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
 
+            <!-- Botón de envío -->
             <button type="submit">Ingresar</button>
+
+            <!-- Opciones extra -->
             <div class="extra-options">
                 <p>¿Olvidaste tu contraseña? <a href="#">Recuperarla</a></p>
                 <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
             </div>
+        
         </form>
     </body>
 </html>

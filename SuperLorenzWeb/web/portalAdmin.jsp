@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperLorenz</title>
+    <title>SuperLorenz - Administrador</title>
     <style>
         * {
             margin: 0;
@@ -121,15 +121,14 @@
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="ServletAdmin?action=miCuenta">Mi Cuenta</a></li>
-                <!-- Nueva opción agregada debajo de "Mi Cuenta" -->
-                <li><a href="ServletEmpleado?action=verEmpleados">Ver Empleados</a></li>
-                <li><a href="ServletProveedor?action=verProveedores">Ver Proveedores</a></li>
-                <li><a href="ServletCliente?action=verClientes">Ver Clientes</a></li>
-                <li><a href="ServletAdmin?action=comprarInsumos">Comprar Insumos</a></li>
+                <li><a href="ServletAdmin?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletAdmin?action=verEmpleados">Ver Empleados</a></li>
+                <li><a href="ServletAdmin?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletAdmin?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletAdmin?action=verComprarInsumos">Ver Compra de Insumos</a></li>
                 <li><a href="ServletAdmin?action=verProductos">Ver Productos</a></li>
                 <li><a href="ServletAdmin?action=verPedidos">Ver Pedidos</a></li>
-                <li><a href="ServletAdmin?action=kardex">Kárdex</a></li>
+                <li><a href="ServletAdmin?action=verKardex">Kárdex</a></li>
             </ul>
         </div>
 
@@ -137,7 +136,7 @@
             <!-- Mensaje de bienvenida -->
             <div class="welcome-message">
                 <h2>¡Bienvenido, ${usuario.nombres}!</h2>
-                <p>Este es el panel de administración de SuperLorenz. Aquí podrás gestionar todo el inventario, pedidos, proveedores y mucho más.</p>
+                <p>Este es el panel de administración de SuperLorenz. Aquí podrás gestionar TODAS las tablas.</p>
                 <p>Selecciona una opción en el menú lateral para comenzar.</p>
             </div>
 

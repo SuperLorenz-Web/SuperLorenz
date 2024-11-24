@@ -4,14 +4,14 @@ import co.edu.konradlorenz.model.enums.*;
 
 public class Persona {
     
-    protected int personaID;
-    protected String numeroDocumento;
-    protected TipoDocumento tipoDocumento;
-    protected String nombres;
-    protected String apellidos;
-    protected String celular;
-    protected String correo;
-    protected String password;
+    private int personaID;
+    private String numeroDocumento;
+    private TipoDocumento tipoDocumento;
+    private String nombres;
+    private String apellidos;
+    private String celular;
+    private String correo;
+    private String password;
 
     public Persona() {
     }

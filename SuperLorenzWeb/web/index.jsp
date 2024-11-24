@@ -220,12 +220,8 @@
             </section>
 
             <%
-                // Crear los objetos de DAO
-                ProductoDAO productoDAO = new ProductoDAO();
-                PrecioDAO precioDAO = new PrecioDAO();
-
                 // Obtener todos los productos
-                List<Producto> productos = productoDAO.getAllProductos();
+                List<Producto> productos = ProductoDAO.obtenerTodos();
                 request.setAttribute("productos", productos);
                 
                 System.out.println("Número de productos: " + productos.size());
@@ -233,7 +229,7 @@
                 // Obtener los precios para cada producto
                 for (Producto producto : productos) {
                     // Obtener los precios correspondientes para cada producto
-                    List<Precio> precios = precioDAO.getPreciosByProductoID(producto.getProductoID());
+                    List<Precio> precios = PrecioDAO.obtenerPreciosPorProductoID(producto.getProductoID());
                     request.setAttribute("precios_" + producto.getProductoID(), precios); // Guardar precios en el request
                 }
             %>

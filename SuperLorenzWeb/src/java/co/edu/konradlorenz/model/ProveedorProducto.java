@@ -6,8 +6,8 @@ public class ProveedorProducto {
     private int proveedorProductoID;
     private int productoID;
     private int proveedorID;
-    private float valorMinimo;
-    private float valorMaximo;
+    private double valorMinimo;
+    private double valorMaximo;
  
     public ProveedorProducto(){
     }
@@ -36,19 +36,19 @@ public class ProveedorProducto {
         this.proveedorID = proveedorID;
     }
 
-    public float getValorMinimo() {
+    public double getValorMinimo() {
         return valorMinimo;
     }
 
-    public void setValorMinimo(float valorMinimo) {
+    public void setValorMinimo(double valorMinimo) {
         this.valorMinimo = valorMinimo;
     }
 
-    public float getValorMaximo() {
+    public double getValorMaximo() {
         return valorMaximo;
     }
 
-    public void setValorMaximo(float valorMaximo) {
+    public void setValorMaximo(double valorMaximo) {
         this.valorMaximo = valorMaximo;
     }
     

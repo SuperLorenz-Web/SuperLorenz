@@ -17,19 +17,19 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+            color: black;
         }
 
         body {
             background-color: #ddd;
         }
 
-        /* Encabezado */
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: #a168a3;
-            padding: 10px;
+            padding: 15px 20px;
             color: white;
         }
 
@@ -39,37 +39,41 @@
         }
 
         .header .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
         }
 
         .header .user-info {
             display: flex;
-            gap: 20px;
+            gap: 30px;
         }
 
-        /* Contenedor principal */
         .container {
             display: flex;
         }
 
-        /* Barra lateral */
         .sidebar {
-            width: 200px;
-            background-color: #6a2f88; /* Color de fondo morado fuerte */
+            width: 220px;
+            background-color: #5e0063;
             padding: 20px 0;
             color: white;
             text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .sidebar ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .sidebar ul li {
-            padding: 15px 0;
+            padding: 30px 0;
+            font-size: 18px;
             cursor: pointer;
         }
 
@@ -77,70 +81,40 @@
             background-color: #8c4ea8;
         }
 
-        /* Sección de contenido */
         .content {
             flex-grow: 1;
             padding: 20px;
         }
 
-        .content-header {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .content-header input[type="button"] {
-            background-color: #a168a3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .content-header input[type="text"] {
-            padding: 10px;
-            width: 200px;
-        }
-
-        /* Tabla de contenido */
-        .table-container {
+        .welcome-message {
             background-color: #b48ebf;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .table-row {
-            display: flex;
-            justify-content: space-between;
-            background-color: #d8aad7;
-            height: 40px;
-            margin-bottom: 10px;
-            padding: 0 10px;
-            align-items: center;
-        }
-
-        .table-row:hover {
-            background-color: #b78cd5;
-        }
-
-        .table-row .cell {
-            flex: 1;
+            padding: 20px;
             text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
         }
 
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
     <div class="header">
         <div class="logo">
             <img src="imagenes/LogoKonrad.png" alt="SuperLorenz Logo">
             <h1>SuperLorenz</h1>
         </div>
         <div class="user-info">
-            <span>¡Hola Juan!</span>
-            <span>Cerrar Sesión</span>
+            <span>${usuario.nombres}</span>
+            <span><a href="loginEmpleadoAdmin.jsp">Cerrar Sesión</a></span>
         </div>
     </div>
 
@@ -149,47 +123,25 @@
         <!-- Barra lateral -->
         <div class="sidebar">
             <ul>
-                <li>Mi Cuenta</li>
-                <li>Proveedores</li>
-                <li>Clientes</li>
-                <li>Pedidos</li>
-                <li>Productos</li>
-                <li>Informes de Ventas</li>
-                <li>Gestión de Empleados</li>
+                <li><a href="ServletEmpleado?action=verMiCuenta">Mi Cuenta</a></li>
+                <li><a href="ServletEmpleado?action=verProveedores">Ver Proveedores</a></li>
+                <li><a href="ServletEmpleado?action=verClientes">Ver Clientes</a></li>
+                <li><a href="ServletEmpleado?action=verComprarInsumos">Ver Compra de Insumos</a></li>
+                <li><a href="ServletEmpleado?action=verProductos">Ver Productos</a></li>
+                <li><a href="ServletEmpleado?action=verPedidos">Ver Pedidos</a></li>
+                <li><a href="ServletEmpleado?action=verKardex">Kárdex</a></li>
             </ul>
         </div>
 
-        <!-- Sección de contenido -->
         <div class="content">
-            <!-- Encabezado de la sección de contenido -->
-            <div class="content-header">
-                <input type="button" value="Nuevo Pedido">
-                <input type="text" placeholder="Buscar productos...">
+            <!-- Mensaje de bienvenida -->
+            <div class="welcome-message">
+                <h2>¡Bienvenido, ${usuario.nombres}!</h2>
+                <p>Este es el panel de empleado de SuperLorenz. Aquí podrás gestionar las tablas.</p>
+                <p>Selecciona una opción en el menú lateral para comenzar.</p>
             </div>
 
-            <!-- Tabla de contenido -->
-            <div class="table-container">
-                <!-- Filas de la tabla (simulación) -->
-                <div class="table-row">
-                    <div class="cell">Pedido #001</div>
-                    <div class="cell">Juan Pérez</div>
-                    <div class="cell">Pendiente</div>
-                    <div class="cell">Ver Detalles</div>
-                </div>
-                <div class="table-row">
-                    <div class="cell">Pedido #002</div>
-                    <div class="cell">María López</div>
-                    <div class="cell">Enviado</div>
-                    <div class="cell">Ver Detalles</div>
-                </div>
-                <div class="table-row">
-                    <div class="cell">Pedido #003</div>
-                    <div class="cell">Carlos García</div>
-                    <div class="cell">Pendiente</div>
-                    <div class="cell">Ver Detalles</div>
-                </div>
-                <!-- Más filas -->
-            </div>
+        </div>
         </div>
     </div>
 
