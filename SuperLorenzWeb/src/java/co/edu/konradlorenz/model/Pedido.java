@@ -13,7 +13,7 @@ public class Pedido {
     private Date fechaPago;
     private Date fechaEnvio;
     private Date fechaEntrega;
-    private float valorTotal;
+    private double valorTotal;
     
     
     public Pedido() {
@@ -75,11 +75,11 @@ public class Pedido {
         this.fechaEntrega = fechaEntrega;
     }
 
-    public float getValorTotal() {
+    public double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(float valorTotal) {
+    public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
     

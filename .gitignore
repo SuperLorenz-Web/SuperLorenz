@@ -2,3 +2,4 @@
 /SuperLorenzWeb/build/
 /Tomcat 10.1.33/
 .DS_Store
+/SuperLorenzWeb/dist/

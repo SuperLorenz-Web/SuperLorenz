@@ -11,7 +11,7 @@ public class Kardex {
     private int cantidadSalida;
     private int cantidadEntrada;
     private int cantidadDisponible;
-    private MotivoSalida motivosalida;
+    private MotivoSalida motivoSalida;
     private String otroMotivoSalida;
     private Date fecha;
     
@@ -58,12 +58,12 @@ public class Kardex {
         this.cantidadDisponible = cantidadDisponible;
     }
 
-    public MotivoSalida getMotivosalida() {
-        return motivosalida;
+    public MotivoSalida getMotivoSalida() {
+        return motivoSalida;
     }
 
-    public void setMotivosalida(MotivoSalida motivosalida) {
-        this.motivosalida = motivosalida;
+    public void setMotivoSalida(MotivoSalida motivoSalida) {
+        this.motivoSalida = motivoSalida;
     }
 
     public String getOtroMotivoSalida() {
@@ -81,5 +81,5 @@ public class Kardex {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    
+
 }

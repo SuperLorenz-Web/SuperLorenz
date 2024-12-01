@@ -7,9 +7,9 @@ import java.util.Date;
 public class Precio {
     private int precioID;
     private int productoID;
-    private float valorUnitario;
-    private float iva;
-    private float precioUnitarioTotal;
+    private double valorUnitario;
+    private double iva;
+    private double precioUnitarioTotal;
     private Date fecha;
     
     
@@ -32,27 +32,27 @@ public class Precio {
         this.productoID = productoID;
     }
 
-    public float getValorUnitario() {
+    public double getValorUnitario() {
         return valorUnitario;
     }
 
-    public void setValorUnitario(float valorUnitario) {
+    public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 
-    public float getIva() {
+    public double getIva() {
         return iva;
     }
 
-    public void setIva(float iva) {
+    public void setIva(double iva) {
         this.iva = iva;
     }
 
-    public float getPrecioUnitarioTotal() {
+    public double getPrecioUnitarioTotal() {
         return precioUnitarioTotal;
     }
 
-    public void setPrecioUnitarioTotal(float precioUnitarioTotal) {
+    public void setPrecioUnitarioTotal(double precioUnitarioTotal) {
         this.precioUnitarioTotal = precioUnitarioTotal;
     }
 

@@ -12,7 +12,7 @@ public class CompraInsumos {
     private Estado estado;
     private Date fechaCompra;
     private Date fechaEntrega;
-    private float valorTotal;
+    private double valorTotal;
     
     public CompraInsumos(){
         
@@ -66,11 +66,11 @@ public class CompraInsumos {
         this.fechaEntrega = fechaEntrega;
     }
 
-    public float getValorTotal() {
+    public double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(float valorTotal) {
+    public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
     

@@ -4,36 +4,47 @@ import co.edu.konradlorenz.model.*;
 import co.edu.konradlorenz.model.dao.*;
 import co.edu.konradlorenz.model.enums.*;
 import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.io.*;
 import java.text.*;
 import java.util.*;
 
+@WebServlet(name = "ServletCliente", urlPatterns = {"/ServletCliente"})
 public class ServletCliente extends HttpServlet {
     
+    // Abre: processRequest
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         response.setContentType("text/html;charset=UTF-8");
 
         String action = request.getParameter("action"); // Identifica la acción solicitada
-
-        if ("register".equals(action)) {
-            registerClient(request, response);
-        } else if ("login".equals(action)) {
-            loginClient(request, response);
-        } else {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Acción no válida");
+        
+        switch (action) {
+            case "register" -> register(request, response);
+            case "login" -> login(request, response);
+            case "verClientes" -> verClientes(request, response);
+            default -> response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Acción no válida");
         }
         
     }
-    //processRequest
-
-    //Abre: registerClient
-    private void registerClient(HttpServletRequest request, HttpServletResponse response)
+    // Cierra: processRequest
+    
+    
+    
+    
+    
+    //Abre: register
+    private void register(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         
         try{
+            
+            Cliente nuevoCliente = new Cliente();
+            
+            
+            
             //Persona:
             String numeroDocumento = request.getParameter("numeroDocumento");
             TipoDocumento tipoDocumento = TipoDocumento.valueOf(request.getParameter("tipoDocumento")); // Enum conversion
@@ -43,35 +54,35 @@ public class ServletCliente extends HttpServlet {
             String correo = request.getParameter("correo");
             String password = request.getParameter("password");
             
-            //Cliente:
-            TipoCliente tipoCliente = TipoCliente.valueOf(request.getParameter("tipoCliente")); // Enum conversion
-            String direccion = request.getParameter("direccion");
-            //Conversión de fecha de String a Date
-                String fechaStr = request.getParameter("fechaNacimiento");
-                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                Date fechaNacimiento = formatter.parse(fechaStr);
-            EstadoCivil estadoCivil = EstadoCivil.valueOf(request.getParameter("estadoCivil"));
-            boolean autorizacionDeDatos = Boolean.parseBoolean(request.getParameter("autorizacionDeDatos"));
-
-            Cliente nuevoCliente = new Cliente();
-        
-            //Persona:
             nuevoCliente.setNumeroDocumento(numeroDocumento);
             nuevoCliente.setTipoDocumento(tipoDocumento);
             nuevoCliente.setNombres(nombres);
             nuevoCliente.setApellidos(apellidos);
             nuevoCliente.setCelular(celular);
             nuevoCliente.setCorreo(correo);
-            nuevoCliente.setPassword(password);
-        
+            nuevoCliente.setPassword(password);            
+            
+            
+            
             //Cliente:
+            TipoCliente tipoCliente = TipoCliente.valueOf(request.getParameter("tipoCliente")); // Enum conversion
+            String direccion = request.getParameter("direccion");
+                
+                //Conversión de fecha de String a Date
+                String fechaStr = request.getParameter("fechaNacimiento");
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                Date fechaNacimiento = formatter.parse(fechaStr);
+                
+            EstadoCivil estadoCivil = EstadoCivil.valueOf(request.getParameter("estadoCivil")); // Enum conversion
+            boolean autorizacionDeDatos = Boolean.parseBoolean(request.getParameter("autorizacionDeDatos"));
+            
             nuevoCliente.setTipoCliente(tipoCliente);
             nuevoCliente.setDireccion(direccion);
             nuevoCliente.setFechaNacimiento(fechaNacimiento);
             nuevoCliente.setEstadoCivil(estadoCivil);
             nuevoCliente.setAutorizacionDeDatos(autorizacionDeDatos);
 
-            int status = ClienteDAO.agregarCliente(nuevoCliente);
+            int status = ClienteDAO.agregar(nuevoCliente);
         
             if (status > 0){
                 response.sendRedirect("mensaje.jsp?msg=registro-exitoso");
@@ -81,34 +92,61 @@ public class ServletCliente extends HttpServlet {
             //if
             
         } catch (ParseException e) {
+            System.out.println("ERROR AL REGISTRAR EL CLIENTE...");
             e.printStackTrace();
-            response.sendRedirect("error.jsp");
         }
-        //try-catch
         
-        //request.getRequestDispatcher("/cliente.jsp").forward(request, response); //TODO: Creo que está linea va al final.
     }
-    //Cierra: registerClient
+    //Cierra: register
     
-    //Abre: loginClient
-    private void loginClient(HttpServletRequest request, HttpServletResponse response)
+    
+    
+    
+    
+    //Abre: login
+    private void login(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+        
         String correo = request.getParameter("correo");
         String password = request.getParameter("password");
 
         Cliente cliente = ClienteDAO.iniciarSesion(correo, password);
 
-        if (cliente != null) {
-            // Crear sesión y redirigir al dashboard
-            HttpSession session = request.getSession(true);
-            session.setAttribute("cliente", cliente);
-            response.sendRedirect("dashboard.jsp");
+        if (cliente != null) { 
+            
+            // Guardar el nombre del usuario en la sesión
+            request.getSession().setAttribute("nombres", cliente.getNombres());
+            
+            response.sendRedirect("indexCliente.jsp");
+            
         } else {
-            // Redirigir al formulario de inicio de sesión con error
-            response.sendRedirect("login.jsp?msg=credenciales-invalidas");
+            response.setContentType("text/html;charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
+                out.println("<h1>Error: Credenciales incorrectas</h1>");
+                out.println("<p>Por favor, intenta nuevamente.</p>");
+            }
         }
     }
-    //Cierra: loginClient
+    // Cierra: login
+    
+    
+    
+    
+    
+    // Abre: verClientes
+    private void verClientes(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        
+        List<Cliente> clientes = ClienteDAO.obtenerTodos();
+        request.setAttribute("clientes", clientes);
+        request.getRequestDispatcher("/botonClientes.jsp").forward(request, response);
+        
+    }
+    // Cierra: verClientes
+    
+    
+    
+    
     
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     
@@ -126,9 +164,8 @@ public class ServletCliente extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Servlet para la gestión de la vista de cliente";
+        return "Servlet para la gestión de clientes";
     }
     // </editor-fold>
     
 }
-//class

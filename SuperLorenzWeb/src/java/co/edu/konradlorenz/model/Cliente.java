@@ -4,6 +4,7 @@ import co.edu.konradlorenz.model.enums.*;
 import java.util.Date;
 
 public class Cliente extends Persona {
+    
     private int clienteID;
     private int personaID;
     private TipoCliente tipoCliente;
@@ -72,4 +73,3 @@ public class Cliente extends Persona {
     }
     
 }
-//class
